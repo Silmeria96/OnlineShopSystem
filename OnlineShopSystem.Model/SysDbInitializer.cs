@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using OnlineShopSystem.Model.Category;
 using OnlineShopSystem.Model.User;
-
+using OnlineShopSystem.Security;
 
 namespace OnlineShopSystem.Model
 {
@@ -48,14 +48,14 @@ namespace OnlineShopSystem.Model
                 new Customer
                 {
                     Account = "test001",
-                    Password = "123123",
+                    Password = PasswordHelper.DESEncrypt("123123"),
                     DisplayName = "测试用户1",
                     CreateTime = DateTime.Now
                 },
                 new Customer
                 {
                     Account = "test002",
-                    Password = "123123",
+                    Password = PasswordHelper.DESEncrypt("123123"),
                     DisplayName = "测试用户2",
                     CreateTime = DateTime.Now
                 }

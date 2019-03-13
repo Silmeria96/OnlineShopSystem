@@ -176,6 +176,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\ShopCartController.cs" />
@@ -194,6 +195,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Account\login-background.png" />
+    <Content Include="Images\Account\login-logo.png" />
+    <Content Include="Images\Home\Ad\home-ad1.jpg" />
+    <Content Include="Images\Home\Ad\home-ad2.jpg" />
+    <Content Include="Images\Home\Ad\home-ad3.jpg" />
+    <Content Include="Images\Home\Ad\home-ad4.jpg" />
+    <Content Include="Images\Home\Ad\home-ad5.jpg" />
+    <Content Include="Images\Home\Ad\home-v-ad1.jpg" />
+    <Content Include="Images\Home\Ad\home-v-ad2.jpg" />
+    <Content Include="Images\Home\Ad\home-v-ad3.jpg" />
+    <Content Include="Images\Home\headshot.jpg" />
+    <Content Include="Images\Home\Products\seckill-item1.jpg" />
+    <Content Include="Images\Home\Products\seckill-item2.jpg" />
+    <Content Include="Images\Home\Products\seckill-item3.jpg" />
+    <Content Include="Images\Home\Products\seckill-item4.jpg" />
+    <Content Include="Images\Home\Products\seckill-item5.jpg" />
+    <Content Include="Images\Home\Products\seckill-item6.jpg" />
+    <Content Include="Images\Home\site-logo.gif" />
+    <Content Include="Images\Search\goods1-main.jpg" />
+    <Content Include="Images\Search\goods1.jpg" />
+    <Content Include="Images\Search\search-logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -228,7 +250,7 @@
     <Content Include="Views\Search\Detail.cshtml" />
     <Content Include="Views\ShopCart\AddToCart.cshtml" />
     <Content Include="Views\Shared\_SearchPartial.cshtml" />
-    <Content Include="Views\Shared\_WebsiteManageLayout.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -236,7 +258,7 @@
     <Folder Include="Content\Home\" />
     <Folder Include="Content\iconfont\" />
     <Folder Include="Content\jqzoom\" />
-    <Folder Include="Images\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -247,6 +269,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OnlineShopSystem.BLL\OnlineShopSystem.BLL.csproj">
+      <Project>{e513815a-6f90-45f1-bf09-e7f796256b3f}</Project>
+      <Name>OnlineShopSystem.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OnlineShopSystem.Model\OnlineShopSystem.Model.csproj">
       <Project>{377B2030-FF71-4F87-B160-88F598FC293C}</Project>
       <Name>OnlineShopSystem.Model</Name>

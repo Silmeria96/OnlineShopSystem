@@ -115,12 +115,18 @@
             var formValidator = $("#login-form").validate({
                 submitHandler: function (form) {
                     $.ajax({
-                        type: 'post',
-                        url: 'http://localhost:53378/Account/Login',
+                        type: 'POST',
+                        url: '@Url.Action("Login", "Account")',
                         data: $("#login-form").serialize(),
                         dataType: 'json',
                         success: function (result) {
-                            console.dir(result);
+                            if (!result)
+                                return;
+
+                            if (result.flag)
+                                window.location.href = '@Url.Action("Index","Home")';
+                            else
+                                alert(result.message);
                         },
                         error: function (error) {
                             console.dir(error);

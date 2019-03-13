@@ -12,3 +12,6 @@ H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.dll
 H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.pdb
 H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\EntityFramework.xml
 H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.csprojResolveAssemblyReference.cache
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\OnlineShopSystem.Security.dll
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\OnlineShopSystem.Security.pdb

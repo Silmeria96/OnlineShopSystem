@@ -1,4 +1,5 @@
-﻿using OnlineShopSystem.Model;
+﻿using OnlineShopSystem.BLL.LoginService;
+using OnlineShopSystem.Model;
 using OnlineShopSystem.UI.Models;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,7 @@ namespace OnlineShopSystem.UI.Controllers
         {
             var result = new JsonResult();
 
-            if (model.LoginAccount == "sa" && model.LoginPassword == "sa")
+            if (CustomerLoginHelper.Validate(model.LoginAccount, model.LoginPassword))
             {
                 // 验证通过，设置登录Cookie
                 FormsAuthentication.SetAuthCookie(model.LoginAccount, true);
@@ -43,6 +44,7 @@ namespace OnlineShopSystem.UI.Controllers
                 result = Json(new
                 {
                     flag = true,
+                    message = "登录成功！",
                     token = "#123456"
                 });
             }
@@ -55,7 +57,7 @@ namespace OnlineShopSystem.UI.Controllers
                 result = Json(new
                 {
                     flag = false,
-                    errorMsg = "登录失败！"
+                    message = "登录失败！"
                 });
             }
 

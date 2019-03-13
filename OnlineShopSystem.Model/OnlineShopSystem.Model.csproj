@@ -63,7 +63,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineShopSystem.Security\OnlineShopSystem.Security.csproj">
+      <Project>{0a2cd5ca-e9d1-4fd4-bf9c-7a6a75bd557c}</Project>
+      <Name>OnlineShopSystem.Security</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

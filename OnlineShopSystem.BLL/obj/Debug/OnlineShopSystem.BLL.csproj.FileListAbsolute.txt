@@ -13,3 +13,7 @@ H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.Model.dll
 H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\EntityFramework.dll
 H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.DAL.pdb
 H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.Model.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\EntityFramework.xml
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.Security.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.Security.pdb

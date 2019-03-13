@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopSystem.DAL", "Onl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopSystem.Model", "OnlineShopSystem.Model\OnlineShopSystem.Model.csproj", "{377B2030-FF71-4F87-B160-88F598FC293C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopSystem.Security", "OnlineShopSystem.Security\OnlineShopSystem.Security.csproj", "{0A2CD5CA-E9D1-4FD4-BF9C-7A6A75BD557C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{377B2030-FF71-4F87-B160-88F598FC293C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{377B2030-FF71-4F87-B160-88F598FC293C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{377B2030-FF71-4F87-B160-88F598FC293C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A2CD5CA-E9D1-4FD4-BF9C-7A6A75BD557C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2CD5CA-E9D1-4FD4-BF9C-7A6A75BD557C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2CD5CA-E9D1-4FD4-BF9C-7A6A75BD557C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2CD5CA-E9D1-4FD4-BF9C-7A6A75BD557C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

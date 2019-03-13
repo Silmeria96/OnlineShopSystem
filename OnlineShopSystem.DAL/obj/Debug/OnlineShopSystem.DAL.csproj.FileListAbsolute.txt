@@ -7,3 +7,11 @@ H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\OnlineShopSystem.DAL.dll
 H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\OnlineShopSystem.DAL.pdb
 H:\OnlineShopSystem\OnlineShopSystem.DAL\obj\Debug\OnlineShopSystem.DAL.dll
 H:\OnlineShopSystem\OnlineShopSystem.DAL\obj\Debug\OnlineShopSystem.DAL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.DAL\obj\Debug\OnlineShopSystem.DAL.csprojResolveAssemblyReference.cache
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\EntityFramework.dll
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\OnlineShopSystem.Model.dll
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\OnlineShopSystem.Security.dll
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\OnlineShopSystem.Model.pdb
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\EntityFramework.xml
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\OnlineShopSystem.Security.pdb
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll

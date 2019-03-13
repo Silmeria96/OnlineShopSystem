@@ -1,0 +1,4 @@
+H:\OnlineShopSystem\OnlineShopSystem.Security\bin\Debug\OnlineShopSystem.Security.dll
+H:\OnlineShopSystem\OnlineShopSystem.Security\bin\Debug\OnlineShopSystem.Security.pdb
+H:\OnlineShopSystem\OnlineShopSystem.Security\obj\Debug\OnlineShopSystem.Security.dll
+H:\OnlineShopSystem\OnlineShopSystem.Security\obj\Debug\OnlineShopSystem.Security.pdb

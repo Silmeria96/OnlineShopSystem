@@ -1,4 +1,7 @@
-﻿using System;
+﻿using OnlineShopSystem.DAL;
+using OnlineShopSystem.Model.User;
+using OnlineShopSystem.Security;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +12,7 @@ namespace OnlineShopSystem.BLL.LoginService
     /// <summary>
     /// 客户登录服务类
     /// </summary>
-    public class CustomerLoginHelper
+    public static class CustomerLoginHelper
     {
         /// <summary>
         /// 验证帐号密码
@@ -17,9 +20,15 @@ namespace OnlineShopSystem.BLL.LoginService
         /// <param name="account"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public bool Validate(string account, string password)
+        public static bool Validate(string account, string password)
         {
-            return false;
+            Customer user = new BaseDAL<Customer>().GetModels(a => a.Account == account).FirstOrDefault();
+
+            if (user != null && password == PasswordHelper.DESDecrypt(user.Password))
+                return true;
+            else
+                return false;
         }
+
     }
 }

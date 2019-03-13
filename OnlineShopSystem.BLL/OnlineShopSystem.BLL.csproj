@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginHelper\CustomerLoginHelper.cs" />
+    <Compile Include="Order\OrderHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search\SearchHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OnlineShopSystem.DAL\OnlineShopSystem.DAL.csproj">
@@ -52,7 +55,12 @@
       <Project>{377b2030-ff71-4f87-b160-88f598fc293c}</Project>
       <Name>OnlineShopSystem.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OnlineShopSystem.Security\OnlineShopSystem.Security.csproj">
+      <Project>{0A2CD5CA-E9D1-4FD4-BF9C-7A6A75BD557C}</Project>
+      <Name>OnlineShopSystem.Security</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

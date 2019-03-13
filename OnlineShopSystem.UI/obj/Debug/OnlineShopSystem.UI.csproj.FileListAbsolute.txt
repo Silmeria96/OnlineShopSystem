@@ -194,3 +194,9 @@ H:\OnlineShopSystem\OnlineShopSystem.UI\bin\zh-Hans\Microsoft.Owin.Security.Face
 H:\OnlineShopSystem\OnlineShopSystem.UI\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
 H:\OnlineShopSystem\OnlineShopSystem.UI\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
 H:\OnlineShopSystem\OnlineShopSystem.UI\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+H:\OnlineShopSystem\OnlineShopSystem.UI\bin\OnlineShopSystem.BLL.dll
+H:\OnlineShopSystem\OnlineShopSystem.UI\bin\OnlineShopSystem.DAL.dll
+H:\OnlineShopSystem\OnlineShopSystem.UI\bin\OnlineShopSystem.Security.dll
+H:\OnlineShopSystem\OnlineShopSystem.UI\bin\OnlineShopSystem.BLL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.UI\bin\OnlineShopSystem.DAL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.UI\bin\OnlineShopSystem.Security.pdb
