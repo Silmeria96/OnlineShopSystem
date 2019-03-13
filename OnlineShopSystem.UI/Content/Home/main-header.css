@@ -1,0 +1,160 @@
+﻿body{
+    background-color: #f0f3ef;
+}
+
+.home-wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main-header{
+    position: relative;
+    width: 100%;
+    height: 140px;
+}
+
+.main-header .container-wrapper{
+    height: 100%;
+}
+
+.main-header .logo-container{
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 190px;
+    height: 170px;
+    box-shadow: 0 -12px 10px rgba(0,0,0,0.2);
+    border-bottom: 1px solid #ededed;
+}
+
+.main-header .logo-container img{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+}
+
+
+
+
+.main-header .search-container{
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+
+.main-header .search-container .form{
+    position: relative;
+    top: 25px;
+    left: 320px;
+    width: 550px;
+    height: 35px;
+}
+
+.main-header .search-container .form .search-input-container{
+    position: relative;
+    width: 500px;
+    line-height: 35px;
+}
+
+.main-header .search-container .form .search-input{
+    display: block;
+    padding: 4px 44px 4px 4px;
+    width: 500px;
+    height: 35px;
+}
+
+.main-header .search-container .form .search-submit-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: white;
+    background-color: #f10215;
+    border: none;
+}
+
+.main-header .search-container .form .icon-camera{
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+
+
+
+.main-header .shopcart-container{
+    position: absolute;
+    top: 25px;
+    right: 100px;
+}
+
+.main-header .shopcart-container .shopcart-btn{
+    position: relative;
+    width: 188px;
+    height: 33px;
+    line-height: 33px;
+    background: #fff;
+    border: 1px solid #e3e4e5;
+    text-align: center;
+    overflow: hidden;
+}
+
+.main-header .shopcart-container .shopcart-btn *{
+    font-size: 14px;
+    color: #f10214;
+}
+
+.main-header .shopcart-container .shopcart-btn-count{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    background-color: #f10214;
+    color: white;
+    border-radius: 50%;
+}
+
+
+
+.hotword-container{
+    position: absolute;
+    top: 65px;
+    left: 320px;
+}
+
+.hotword-container .hotword-item {
+    color: #999;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.hotword-container .hotword-item.main{
+    color: #f10215;
+}
+
+
+.nav-container{
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    width: 800px;
+}
+
+.nav-container .nav-items{
+    float: left;
+    padding: 0 5px;
+}
+
+.nav-container .nav-items li{
+    float: left;
+    margin: 0 10px;
+}
+
+.nav-container .nav-items:after{
+    content: '';
+    display: block;
+    clear: both;
+}

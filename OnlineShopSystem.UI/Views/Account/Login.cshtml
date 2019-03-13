@@ -1,0 +1,148 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>京东-欢迎登陆</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/Account/login.css" rel="stylesheet" />
+    <link href="~/Content/iconfont/iconfont.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <style>
+        .error {
+            width: 100%;
+            background: #ffebeb;
+            color: #e4393c;
+            border: 1px solid #faccc6;
+            padding: 3px;
+            line-height: 24px;
+            margin: 0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a class="logo-link" href="/Home/Index">
+                <img src="~/Images/Account/login-logo.png" alt="Alternate Text" />
+            </a>
+            <p class="logo-title">欢迎登陆</p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="login-wrapper">
+            <div class="login-form-wrapper">
+                <div class="login-form">
+                    <div class="tips-wrapper">
+                        <div class="tips-content">
+                            <i class="iconfont icon-location"></i>
+                            <span>京东不会以任何理由要求您转账汇款，谨防诈骗。</span>
+                        </div>
+                    </div>
+                    <div class="login-tabs">
+                        <div class="login-tab">
+                            <a href="#">扫码登陆</a>
+                        </div>
+                        <div class="login-tab active">
+                            <a href="#">账户登陆</a>
+                        </div>
+                    </div>
+                    <div class="login-box">
+                        <div id="msg-wrapper" class="msg-wrapper">
+
+                        </div>
+                        <div class="form-wrapper">
+                            <form id="login-form" action="/Account/Login" method="post">
+                                <div class="input-wrapper">
+                                    <label for="LoginAccount" class="login-label name-label">
+                                        <i class="iconfont icon-location"></i>
+                                    </label>
+                                    <input id="LoginAccount" type="text" name="LoginAccount" value="" placeholder="邮箱/用户名/已验证手机" required minlength="2" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="LoginPassword" class="login-label name-label">
+                                        <i class="iconfont icon-location"></i>
+                                    </label>
+                                    <input id="LoginPassword" type="password" name="LoginPassword" value="" placeholder="密码" required minlength="2" />
+                                </div>
+                                <div class="login-form-row">
+                                    <a href="#">忘记密码？</a>
+                                </div>
+                                <div class="login-from-row">
+                                    <button id="login-btn" class="login-btn" href="#">登陆</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="login-agent-wrapper">
+                        <ul class="login-agent-list">
+                            <li>
+                                <a href="#">
+                                    <i class="iconfont icon-location"></i>
+                                    <span>QQ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <b>|</b>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="iconfont icon-location"></i>
+                                    <span>微信</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <a class="register-link" href="/Account/Register">
+                            <i class="iconfont icon-location"></i>
+                            <span>立即注册</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="login-banner">
+                <div class="login-banner-img"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            var formValidator = $("#login-form").validate({
+                submitHandler: function (form) {
+                    $.ajax({
+                        type: 'post',
+                        url: 'http://localhost:53378/Account/Login',
+                        data: $("#login-form").serialize(),
+                        dataType: 'json',
+                        success: function (result) {
+                            console.dir(result);
+                        },
+                        error: function (error) {
+                            console.dir(error);
+                        }
+                    });
+                },
+                errorPlacement: function (error, element) {
+                    $("#msg-wrapper").empty();
+                    $("#msg-wrapper").append(error);
+                },
+                messages: {
+                    LoginAccount: {
+                        required: " 请输入用户名",
+                        minlength: " 用户名最少2个字符"
+                    },
+                    LoginPassword: {
+                        required: " 请输入密码",
+                        minlength: "密码最少6个字符"
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

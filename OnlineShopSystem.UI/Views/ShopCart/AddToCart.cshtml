@@ -1,0 +1,152 @@
+﻿@{
+    ViewBag.Title = "AddToCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    h3 {
+        margin: 0;
+    }
+
+    .result-container {
+        margin-bottom: 20px;
+        width: 100%;
+        min-height: 150px;
+        background: whitesmoke;
+    }
+
+    .result-wrapper {
+        width: 1210px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .result-msg.success {
+        color: #71b247;
+    }
+
+    .result-msg .iconfont {
+        font-size: 25px;
+    }
+
+    .result-items-wrapper {
+        position: relative;
+        width: 100%;
+        height: calc(100% - 28px);
+        min-height: 100px;
+    }
+
+    .result-item {
+        position: relative;
+        width: 100%;
+        height: 62px;
+    }
+
+        .result-item .result-item-img {
+            display: block;
+            float: left;
+            width: 60px;
+            height: 60px;
+            border: 1px solid #e8e8e8;
+            margin-right: 10px;
+        }
+
+            .result-item .result-item-img img {
+                width: 100%;
+                height: 100%;
+            }
+
+        .result-item .result-item-info {
+            float: left;
+        }
+
+    .result-btns {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .result-btn {
+        display: block;
+        float: left;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 30px;
+        font-size: 16px;
+    }
+
+        .result-btn.details {
+            margin-right: 10px;
+            color: #E2231A;
+            background: #fff;
+            border: 1px solid #fff;
+        }
+
+        .result-btn.payment {
+            background: #E2231A;
+            border: 1px solid #E2231A;
+            color: #fff;
+        }
+
+    .recommend-wrapper {
+        width: 1210px;
+        margin: 0 auto;
+    }
+
+        .recommend-wrapper .recommend-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+        }
+</style>
+
+<div class="result-container">
+    <div class="result-wrapper">
+        <h3 class="result-msg success">
+            <i class="iconfont icon-location"></i>
+            商品已成功加入购物车！
+        </h3>
+        <div class="result-items-wrapper">
+            <div class="result-items-list">
+                <div class="result-item">
+                    <a class="result-item-img" href="#">
+                        <img src="~/Images/Search/goods1.jpg" alt="Alternate Text" />
+                    </a>
+                    <div class="result-item-info">
+                        <a class="result-item-name" href="#">欧莱雅(LOREAL)金致臻颜化妆品护肤套装(洁面+活肤水+乳液+眼霜；赠品精华液+精华水+眼霜*2(赠品随机发)）</a>
+                        <p class="result-item-extra">
+                            <span>颜色：金致臻颜化妆品护肤套装</span>
+                            / 数量：2
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="result-btns">
+                <a class="result-btn details" href="#">
+                    <span>查看商品详情</span>
+                </a>
+                <a class="result-btn payment" href="#">
+                    <span>去购物车结算</span>
+                    <i class="iconfont icon-location"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="recommend-wrapper">
+    <div class="recommend-title">
+        <p>购买了该商品的用户还购买了</p>
+    </div>
+    <div>
+        Swiper1
+    </div>
+    <div>
+        Swiper2
+    </div>
+</div>
+
+<div class="footer">
+    Footer
+</div>
+

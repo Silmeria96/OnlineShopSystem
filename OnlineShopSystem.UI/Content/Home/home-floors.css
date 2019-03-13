@@ -1,0 +1,103 @@
+﻿.home-floors{
+    width: 100%;
+}
+
+.home-floors .floor{
+    margin-bottom: 30px;
+}
+
+.home-floors .floor.f1{
+    height: 275px;
+    margin-bottom: 30px;
+}
+
+.home-floors .floor.f1:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.home-floors .floor.f1 .seckill-left{
+    float: left;
+    width: 190px;
+    height: 100%;
+    background-color: #f10214;
+    color: white;
+    text-align: center;
+}
+
+.home-floors .floor.f1 .seckill-right{
+    float: left;
+    width: calc(100% - 190px);
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-swiper{
+    float: left;
+    width: 800px;
+    height: 100%;
+}
+
+.home-floors .floor.f1 .seckill-right .swiper-slide{
+    width: 200px;
+    background: white;
+    border-left: 1px solid lightgray;
+}
+
+.home-floors .floor.f1 .seckill-right .swiper-slide a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-product-img{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    margin-left: -70px;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-product-title{
+    position: absolute;
+    top: 190px;
+    width: 200px;
+    font-size: 12px;
+    padding: 0 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-product-price{
+    position: absolute;
+    top: 230px;
+    width: 162px;
+    margin: 0 15px;
+    height: 22px;
+    line-height: 22px;
+    background-color: #e6382f;
+    padding: 1px;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-product-price-new{
+    float: left;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-product-price-origion{
+    float: left;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #b7bcb8;
+    text-decoration: line-through;
+}

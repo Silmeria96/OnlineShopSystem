@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Shared/search-partial.css" rel="stylesheet" />
+<link href="~/Content/Search/detail.css" rel="stylesheet" />
+<link href="~/Content/jqzoom/base.css" rel="stylesheet" />
+
+<script src="~/Scripts/jqzoom/jquery.jqzoom.js"></script>
+<script src="~/Scripts/jqzoom/base.js"></script>
+
+@Html.Partial("_SearchPartial")
+
+<div class="detail-wrapper">
+    <div class="product-introduction">
+        <div class="product-preview-wrap">
+            <div id="preview" class="spec-preview">
+                <span class="jqzoom">
+                    <img jqimg="Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" />
+                </span>
+            </div>
+            <!--缩图开始-->
+            <div class="spec-scroll">
+                <a class="prev">&lt;</a> <a class="next">&gt;</a>
+                <div class="items">
+                    <ul>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                    </ul>
+                </div>
+            </div>
+            <!--缩图结束-->
+        </div>
+        <div class="product-info-wrap">
+            <div class="product-name">
+                欧莱雅(LOREAL)金致臻颜化妆品护肤套装(洁面+活肤水+乳液+眼霜；赠品精华液+精华水+眼霜*2(赠品随机发)）
+            </div>
+            <div class="product-price">
+                <div class="product-price-title">价格</div>
+                <div class="product-price-box">
+                    <span>
+                        <span>￥</span>
+                        <span class="product-price-value">819.00</span>
+                    </span>
+                </div>
+            </div>
+            <div class="product-operator">
+
+            </div>
+        </div>
+        <div class="product-recommend-wrap">
+
+        </div>
+    </div>
+</div>
+
+
+
+

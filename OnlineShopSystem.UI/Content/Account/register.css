@@ -1,0 +1,39 @@
+﻿
+.header{
+    width: 100%;
+    height: 110px;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 3px lightgray;
+}
+
+.header .logo{
+    float: left;
+    width: 160px;
+    height: 50px;
+    margin-top: 24px;
+}
+
+.header .logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header .logo img{
+    height: 100%;
+}
+
+.header .logo-title{
+    float: left;
+    margin-top: 24px;
+}
+
+
+.register-form-wrapper{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.register-form-wrapper form{
+    width: 100%;
+}

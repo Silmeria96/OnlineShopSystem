@@ -1,0 +1,9 @@
+d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\OnlineShopSystem.DAL.dll
+d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\OnlineShopSystem.DAL.pdb
+d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.DAL\obj\Debug\OnlineShopSystem.DAL.csprojResolveAssemblyReference.cache
+d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.DAL\obj\Debug\OnlineShopSystem.DAL.dll
+d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.DAL\obj\Debug\OnlineShopSystem.DAL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\OnlineShopSystem.DAL.dll
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Debug\OnlineShopSystem.DAL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.DAL\obj\Debug\OnlineShopSystem.DAL.dll
+H:\OnlineShopSystem\OnlineShopSystem.DAL\obj\Debug\OnlineShopSystem.DAL.pdb

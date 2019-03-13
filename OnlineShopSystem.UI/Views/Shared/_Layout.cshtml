@@ -1,0 +1,59 @@
+﻿@using OnlineShopSystem.UI.Util
+
+@{
+    string websiteName = CommonFunc.GetConfig("WebsiteName");
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - @websiteName</title>
+    <script src="~/Scripts/jquery-1.4.2.min.js"></script>
+    @Styles.Render("~/Content/Shared/css")
+</head>
+<body>
+    <nav id="header" class="header">
+        <div class="top-header">
+            <div class="container-wrapper">
+                <div class="wrapper-left" style="margin-left: 210px;">
+                    <div class="location">
+                        <i class="iconfont icon-location"></i>
+                        <span id="location-content" class="location-content">北京</span>
+                    </div>
+                </div>
+                <div class="wrapper-right">
+                    <ul class="menu-list">
+                        <li>
+                            <a id="top-header-login" class="top-header-login" href="/Account/Login">你好，请登录</a>
+                            <a id="top-header-register" class="top-header-register" href="/Account/Register">免费注册</a>
+                        </li>
+                        <li>|</li>
+                        <li><a href="#">我的订单</a></li>
+                        <li>|</li>
+                        <li><a href="#"><span>我的京东</span><i class="iconfont icon-xiajiantou"></i></a></li>
+                        <li>|</li>
+                        <li><a href="#"><span>京东会员</span></a></li>
+                        <li>|</li>
+                        <li><a href="#"><span>企业采购</span><i class="iconfont icon-xiajiantou"></i></a></li>
+                        <li>|</li>
+                        <li><a href="#"><span>客户服务</span><i class="iconfont icon-xiajiantou"></i></a></li>
+                        <li>|</li>
+                        <li><a href="#"><span>网站导航</span><i class="iconfont icon-xiajiantou"></i></a></li>
+                        <li>|</li>
+                        <li><a href="#"><span>手机京东</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

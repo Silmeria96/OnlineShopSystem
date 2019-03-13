@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>个人注册</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Account/register.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/Home/Index">
+                    <img src="~/Images/Account/login-logo.png" alt="Alternate Text" />
+                </a>
+            </div>
+            <div class="logo-title">
+                <h3>欢迎注册</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="register-form-wrapper">
+            <form class="form-horizontal" role="form" method="post">
+                <div class="form-group">
+                    <label for="firstname" class="col-sm-2 control-label">用户名</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="firstname" placeholder="您的登录账户名">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">设置密码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="lastname" placeholder="建议至少使用两种字符组合">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">确认密码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="lastname" placeholder="请二次输入密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-danger btn-block">立即注册</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

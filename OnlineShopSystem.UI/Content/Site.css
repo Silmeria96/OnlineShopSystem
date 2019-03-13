@@ -1,0 +1,41 @@
+﻿body{
+    padding: 0;
+    font-size: 12px;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, a:focus{
+    color: #f10215;
+    text-decoration: none;
+}
+
+.container-wrapper{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper-left{
+    float: left;
+}
+
+.wrapper-right{
+    float: right;
+}
+
+.spacer{
+    float: left;
+    color: #ccc;
+}
+
+ul{
+    padding: 0;
+}

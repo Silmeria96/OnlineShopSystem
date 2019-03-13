@@ -1,0 +1,207 @@
+﻿body{
+    margin: 0;
+}
+
+.header{
+    position: relative;
+    width: 1000px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.header .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 60px;
+}
+
+.header .logo .logo-link{
+    display: block;
+    float: left;
+}
+
+.header .logo .logo-title{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    font-size: 24px;
+    margin: 0;
+}
+
+.header:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.content .login-wrapper{
+    width: 100%;
+    height: 475px;
+}
+
+.content .login-wrapper .login-banner{
+    width: 100%;
+    height: 100%;
+    background-color: #bd0200;
+}
+
+.content .login-wrapper .login-banner-img{
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../../Images/Account/login-background.png");
+    background-size: 100%;
+}
+
+.content .login-form-wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.content .login-form{
+    position: relative;
+    float: right;
+    top: 10px;
+    width: 346px;
+    background: #fff;
+}
+
+.content .login-form .tips-wrapper{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background: #fff8f0;
+}
+
+.content .login-form .tips-content *{
+    width: 90%;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+
+.content .login-form .login-tabs{
+    position: relative;
+    width: 100%;
+    height: 55px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.content .login-form .login-tab{
+    float: left;
+    width: calc(50% - 1px);
+    height: 100%;
+    line-height: 55px;
+    text-align: center;
+    border-right: 1px solid #f4f4f4;
+}
+
+.content .login-form .login-tab a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+}
+
+.content .login-form .login-tab.active a{
+    color: #e4393c;
+    font-weight: 700;
+}
+
+.content .login-box{
+    padding-bottom: 20px;
+}
+
+.content .login-box .msg-wrapper{
+    width: calc(100% - 40px);
+    padding: 5px 20px;
+    height: 23px;
+}
+
+.content .login-box .form-wrapper{
+    width: calc(100% - 40px);
+    padding: 0 20px;
+}
+
+.content .login-box .form-wrapper .input-wrapper{
+    width: 100%;
+    height: 38px;
+    margin-bottom: 20px;
+    border: 1px solid #bdbdbd;
+}
+
+.content .login-box .form-wrapper .input-wrapper label{
+    display: block;
+    float: left;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background: #f7f7f7;
+    color: #bdbdbd;
+    border-right: 1px solid #bdbdbd;
+}
+
+.content .login-box .form-wrapper .input-wrapper input{
+    display: block;
+    float: left;
+    border: none;
+    padding: 10px;
+    width: calc(100% - 59px);
+    height: calc(100% - 20px);
+}
+
+.content .login-box .login-form-row{
+    position: relative;
+    width: 100%;
+    height: 18px;
+}
+
+
+.content .login-box .login-form-row a{
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+}
+
+.content .login-box .login-from-row .login-btn{
+    display: block;
+    width: 300px;
+    height: 33px;
+    line-height: 33px;
+    margin: 15px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #e85356;
+    background: #e4393c;
+    letter-spacing: 10px;
+}
+
+.content .login-form .login-agent-wrapper{
+    width: calc(100% - 40px);
+    height: 51px;
+    line-height: 50px;
+    padding: 0 20px;
+    border-top: 1px solid #f4f4f4;
+    background-color: #fcfcfc;
+}
+
+.login-agent-list{
+    float: left;
+    margin: 0;
+    margin-right: 15px;
+}
+
+.login-agent-list li{
+    float: left;
+    margin-right: 10px;
+}
+
+.login-agent-wrapper .register-link{
+    float: right;
+    color: #b61d1d;
+    font-size: 16px;
+}

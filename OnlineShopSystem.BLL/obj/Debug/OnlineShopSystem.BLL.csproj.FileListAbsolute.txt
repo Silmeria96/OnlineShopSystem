@@ -1,0 +1,15 @@
+d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.BLL.dll
+d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.BLL.pdb
+d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.BLL\obj\Debug\OnlineShopSystem.BLL.csprojResolveAssemblyReference.cache
+d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.BLL\obj\Debug\OnlineShopSystem.BLL.dll
+d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.BLL\obj\Debug\OnlineShopSystem.BLL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.BLL.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.BLL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\obj\Debug\OnlineShopSystem.BLL.csprojResolveAssemblyReference.cache
+H:\OnlineShopSystem\OnlineShopSystem.BLL\obj\Debug\OnlineShopSystem.BLL.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\obj\Debug\OnlineShopSystem.BLL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.DAL.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.Model.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\EntityFramework.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.DAL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.Model.pdb

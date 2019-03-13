@@ -1,0 +1,82 @@
+﻿.search-section-wrapper .search-wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.search-section-wrapper .search-wrapper:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.search-section-wrapper .search-wrapper .logo{
+    position: relative;
+    float: left;
+    width: 276px;
+    height: 50px;
+    margin: 15px 0 22px;
+}
+
+.search-section-wrapper .search-wrapper .search-box{
+    position: relative;
+    float: left;
+    margin: 27px 30px 0 95px;
+}
+
+.search-section-wrapper .search-wrapper .search-box form{
+    width: 536px;
+    height: 40px;
+}
+
+.search-section-wrapper .search-wrapper .shopcart-box{
+    position: relative;
+    float: left;
+    margin-top: 27px;
+    width: 140px;
+    height: 36px;
+}
+
+.hotwords-box{
+    float: left;
+    padding-left: 95px;
+}
+
+.nav-wrapper{
+    margin-top: 10px;
+    height: 33px;
+    border-bottom: 2px solid #f30213;
+}
+
+.nav-inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.nav-wrapper a{
+    float: left;
+    line-height: 33px;
+}
+
+.nav-wrapper .nav-categories{
+    float: left;
+    width: 190px;
+    height: 33px;
+    
+    background: #f30213;
+    
+}
+
+.nav-wrapper .nav-categories a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.nav-wrapper .nav-list ul li a{
+    padding: 0 22px;
+    font-size: 14px;
+    font-weight: 700;
+}
