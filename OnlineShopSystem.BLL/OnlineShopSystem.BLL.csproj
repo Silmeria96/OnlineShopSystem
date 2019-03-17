@@ -41,7 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginHelper\CustomerLoginHelper.cs" />
+    <Compile Include="Account\CustomerLoginHelper.cs" />
+    <Compile Include="Account\CustomerRegisterHelper.cs" />
+    <Compile Include="Model\LoginResult.cs" />
+    <Compile Include="Model\AccountActionResult.cs" />
+    <Compile Include="Model\RegisterResult.cs" />
     <Compile Include="Order\OrderHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\SearchHelper.cs" />

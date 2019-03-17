@@ -1,0 +1,241 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background-color: #f0f3ef;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .left-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 170px;
+        background-color: #ffffff;
+    }
+
+        .left-menu .group {
+            width: 100%;
+            padding: 15px 20px;
+            border-bottom: 1px solid #f3f3f3;
+        }
+
+        .left-menu .title {
+            font-weight: bold;
+        }
+
+        .left-menu .list-item {
+            width: 100%;
+            height: 32px;
+            line-height: 32px;
+        }
+
+    .content-screen {
+        position: absolute;
+        top: 0;
+        left: 170px;
+        width: calc(100% - 170px);
+    }
+
+        .content-screen .wrap {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .content-screen .floor1 {
+            position: relative;
+            width: 100%;
+            height: 225px;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+        }
+
+            .content-screen .floor1 .left {
+                position: absolute;
+                top: -12.5px;
+                left: 0;
+                width: 250px;
+                height: 250px;
+                background-color: #df3028;
+                box-shadow: 0 0 3px 3px lightgray;
+            }
+
+                .content-screen .floor1 .left .head-box {
+                }
+
+                .content-screen .floor1 .left .head-wrap {
+                    width: 100px;
+                    height: 100px;
+                    margin: 10px auto;
+                    border: 4px solid whitesmoke;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+
+                .content-screen .floor1 .left .head-content {
+                    width: 100%;
+                    height: 100%;
+                    background-size: 100% 100%;
+                }
+
+                .content-screen .floor1 .left .name-box {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .content-screen .floor1 .left .name-content {
+                    font-weight: bold;
+                    color: #ffffff;
+                }
+
+            .content-screen .floor1 .right {
+                position: absolute;
+                top: 0;
+                left: 250px;
+                width: calc(100% - 250px);
+                height: 100%;
+            }
+
+                .content-screen .floor1 .right .title-box {
+                    width: 100%;
+                    border-bottom: 1px solid lightgray;
+                }
+
+                .content-screen .floor1 .right .title-content {
+                    height: 45px;
+                    line-height: 45px;
+                    margin: 0 0 0 15px;
+                    font-weight: bold;
+                }
+
+                .content-screen .floor1 .right .list-box {
+                    width: 100%;
+                    height: calc(100% - 45px);
+                }
+
+                    .content-screen .floor1 .right .list-box .list-item {
+                        float: left;
+                        width: 150px;
+                        height: 100%;
+                        padding: 10px;
+                    }
+
+                        .content-screen .floor1 .right .list-box .list-item .amount-link {
+                        }
+
+                        .content-screen .floor1 .right .list-box .list-item .amount {
+                            font-size: 22px;
+                            font-weight: bold;
+                        }
+
+        .content-screen .floor2 {
+            position: relative;
+            width: 100%;
+        }
+
+            .content-screen .floor2 .left {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 650px;
+                background-color: #ffffff;
+            }
+
+            .content-screen .floor2 .title {
+                width: 100%;
+                border-bottom: 1px solid lightgray;
+            }
+
+            .content-screen .floor2 .title-content {
+                height: 45px;
+                line-height: 45px;
+                margin: 0 0 0 15px;
+                font-weight: bold;
+            }
+</style>
+
+<div class="container">
+
+    <!--左侧导航-->
+    <div class="left-menu">
+        <div class="group">
+            <h4 class="title">功能列表</h4>
+            <ul class="list">
+                <li class="list-item"><a href="#">我的订单</a></li>
+                <li class="list-item"><a href="#">我的钱包</a></li>
+                <li class="list-item"><a href="#">我的订单</a></li>
+            </ul>
+        </div>
+        <div class="group">
+            <h4 class="title">我的关注</h4>
+            <ul class="list">
+                <li class="list-item"><a href="#">关注商品</a></li>
+                <li class="list-item"><a href="#">关注店铺</a></li>
+                <li class="list-item"><a href="#">内容收藏</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--右侧内容区域-->
+    <div class="content-screen">
+        <div class="wrap">
+            <div class="floor1">
+                <div class="left">
+                    <div class="head-box">
+                        <div class="head-wrap">
+                            <a class="head-link" href="#">
+                                <img class="head-content" src="~/Images/Home/headshot.jpg" alt="Alternate Text" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="name-box">
+                        <h3 class="name-content">@ViewBag.UserDisplayName</h3>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title-box">
+                        <h4 class="title-content">我的钱包</h4>
+                    </div>
+                    <div class="list-box">
+                        <div class="list-item">
+                            <a class="amount-link" href="#">
+                                <span class="amount">0</span>
+                            </a>
+                            <p class="name">优惠券</p>
+                        </div>
+                        <div class="list-item">
+                            <a class="amount-link" href="#">
+                                <span class="amount">0.00</span>
+                            </a>
+                            <p class="name">余额</p>
+                        </div>
+                        <div class="list-item">
+                            <a class="amount-link" href="#">
+                                <span class="amount">0</span>
+                            </a>
+                            <p class="name">积分</p>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="floor2">
+                <div class="left">
+                    <div class="order-area">
+                        <div class="title">
+                            <h4 class="title-content">我的订单</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

@@ -10,7 +10,7 @@ namespace OnlineShopSystem.Model
     /// <summary>
     /// 数据库初始化类
     /// </summary>
-    public class SysDbInitializer : DropCreateDatabaseAlways<SysContext>
+    public class SysDbInitializer : DropCreateDatabaseIfModelChanges<SysContext>
     {
         // 数据库初始化数据
         protected override void Seed(SysContext context)

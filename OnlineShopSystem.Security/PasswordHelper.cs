@@ -8,8 +8,14 @@ using System.Threading.Tasks;
 
 namespace OnlineShopSystem.Security
 {
+    /// <summary>
+    /// 密码帮助类
+    /// </summary>
     public class PasswordHelper
     {
+        /// <summary>
+        /// DES加密字符
+        /// </summary>
         private static string desEncryptKey = "Silmeria";
 
         /// <summary>

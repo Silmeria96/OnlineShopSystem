@@ -1,4 +1,4 @@
-﻿using OnlineShopSystem.BLL.LoginService;
+﻿using OnlineShopSystem.BLL.Account;
 using OnlineShopSystem.Model;
 using OnlineShopSystem.UI.Models;
 using System;
@@ -10,11 +10,13 @@ using System.Web.Security;
 
 namespace OnlineShopSystem.UI.Controllers
 {
+    // 用户帐号控制器
     public class AccountController : Controller
     {
+        // 首页
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Login", "Account");
         }
 
         // 登录页面
@@ -35,33 +37,46 @@ namespace OnlineShopSystem.UI.Controllers
         {
             var result = new JsonResult();
 
-            if (CustomerLoginHelper.Validate(model.LoginAccount, model.LoginPassword))
+            var loginResult = CustomerLoginHelper.TryLogin(model.LoginAccount, model.LoginPassword);
+
+            if (loginResult.State)
             {
-                // 验证通过，设置登录Cookie
-                FormsAuthentication.SetAuthCookie(model.LoginAccount, true);
+                // 验证通过，设置登录Session
+                Session["UserAccount"] = loginResult.UserAccount;
+                Session["UserDisplayName"] = loginResult.UserDisplayName;
 
                 // 返回登录结果
                 result = Json(new
                 {
                     flag = true,
-                    message = "登录成功！",
+                    message = loginResult.Message,
                     token = "#123456"
                 });
             }
             else
             {
-                // 验证失败，清除登录Cookie
-                FormsAuthentication.SetAuthCookie(model.LoginAccount, false);
+                // 验证失败，清除登录Session
+                Session.Remove("UserAccount");
+                Session.Remove("UserDisplayName");
 
                 // 返回登录结果
                 result = Json(new
                 {
                     flag = false,
-                    message = "登录失败！"
+                    message = loginResult.Message,
                 });
             }
 
             return result;
+        }
+
+        // 登出
+        public ActionResult Logout()
+        {
+            Session.Remove("UserAccount");
+            Session.Remove("UserDisplayName");
+
+            return RedirectToAction("Login", "Account");
         }
 
         // 注册页面
@@ -71,6 +86,14 @@ namespace OnlineShopSystem.UI.Controllers
             return View();
         }
 
+        // 尝试注册
+        [HttpPost]
+        public ActionResult Register(CustomerRegisterModel model)
+        {
+            var registerResult = CustomerRegisterHelper.TryRegister(model.Account, model.Password);
+
+            return View(registerResult);
+        }
 
     }
 }

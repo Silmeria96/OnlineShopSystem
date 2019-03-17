@@ -180,10 +180,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\ShopCartController.cs" />
+    <Compile Include="Controllers\UserCenterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CustomerLoginModel.cs" />
+    <Compile Include="Models\CustomerRegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Util\CommonFunc.cs" />
@@ -243,7 +245,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Search\Index.cshtml" />
@@ -251,6 +252,9 @@
     <Content Include="Views\ShopCart\AddToCart.cshtml" />
     <Content Include="Views\Shared\_SearchPartial.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Shared\_SiteNavUserPartial.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\UserCenter\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -258,7 +262,7 @@
     <Folder Include="Content\Home\" />
     <Folder Include="Content\iconfont\" />
     <Folder Include="Content\jqzoom\" />
-    <Folder Include="Views\Admin\" />
+    <Folder Include="Images\Products\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

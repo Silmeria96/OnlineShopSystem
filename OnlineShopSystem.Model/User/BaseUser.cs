@@ -23,7 +23,6 @@ namespace OnlineShopSystem.Model.User
         [MaxLength(50, ErrorMessage = "密码长度溢出")]
         public string Password { get; set; }
 
-        [Required]
         [Display(Name = "昵称")]
         public string DisplayName { get; set; }
 

@@ -1,0 +1,11 @@
+﻿
+@if (Session["UserAccount"] != null && Session["UserDisplayName"] != null)
+{
+    @Html.ActionLink("欢迎您，" + Session["UserDisplayName"].ToString() + "!", "Index", "UserCenter", routeValues: null, htmlAttributes: new { title = "Manage" })
+    @Html.ActionLink("注销", "Logout", "Account", routeValues: null, htmlAttributes: new { id = "top-header-register", @class = "top-header-register" });
+}
+else
+{
+    @Html.ActionLink("你好，请登录", "Login", "Account", routeValues: null, htmlAttributes: new { id = "top-header-login", @class = "top-header-login" });
+    @Html.ActionLink("免费注册", "Register", "Account", routeValues: null, htmlAttributes: new { id = "top-header-register", @class = "top-header-register" });
+}
