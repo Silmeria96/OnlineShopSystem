@@ -1,0 +1,67 @@
+﻿@model OnlineShopSystem.Model.Category.BaseCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BaseCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsUsed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsUsed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CateID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -28,6 +28,11 @@ namespace OnlineShopSystem.DAL
             dbContext.Set<T>().AddOrUpdate(t);
         }
 
+        public IQueryable<T> GetAllModels()
+        {
+            return dbContext.Set<T>();
+        }
+
         public IQueryable<T> GetModels(Expression<Func<T, bool>> whereLambda)
         {
             return dbContext.Set<T>().Where(whereLambda);

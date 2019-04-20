@@ -14,6 +14,7 @@ namespace OnlineShopSystem.Model.User
     [Table("Administrator")]
     public class Administrator : BaseUser
     {
+        [Display(Name = "管理员级别")]
         public int AdminLevel { get; set; }
     }
 }

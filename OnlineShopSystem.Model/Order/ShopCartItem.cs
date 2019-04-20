@@ -15,19 +15,26 @@ namespace OnlineShopSystem.Model.Order
         [Key]
         public int ID { get; set; }
 
+
         [Display(Name = "购物车ID")]
         public int CartID { get; set; }
+
 
         [Display(Name = "产品ID")]
         public int ProductID { get; set; }
 
+
         [Display(Name = "数量")]
         public int Quantity { get; set; }
 
+
         [Display(Name = "创建时间")]
+        [DataType(DataType.DateTime)]
         public DateTime? CreateTime { get; set; }
 
+
         [Display(Name = "更改时间")]
+        [DataType(DataType.DateTime)]
         public DateTime? UpdateTime { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿.home-floors{
+﻿
+/* 通用样式 */
+.home-floors{
     width: 100%;
 }
 
@@ -6,6 +8,45 @@
     margin-bottom: 30px;
 }
 
+.floor .floor-title-wrapper{
+    width: 100%;
+    height: 45px;
+}
+
+.floor .floor-title-wrapper .title{
+    position: relative;
+    margin: 0 auto;
+    width: 210px;
+    height:45px;
+    line-height: 45px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.floor .floor-title-wrapper .title::before{
+    content: '';
+    position: absolute;
+    top: 21px; 
+    left: 0;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: black;
+}
+
+.floor .floor-title-wrapper .title::after{
+    content: '';
+    position: absolute;
+    top: 21px; 
+    right: 0;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: black;
+    top: 19px;  
+}
+
+/* 秒杀区域 */
 .home-floors .floor.f1{
     height: 275px;
     margin-bottom: 30px;
@@ -26,6 +67,20 @@
     text-align: center;
 }
 
+.seckill-left-link *{
+    color: white;
+}
+
+.seckill-left-link .title{
+    margin-top: 34px;
+    font-size: 34px;
+}
+
+.seckill-left-link .subtitle{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
 .home-floors .floor.f1 .seckill-right{
     float: left;
     width: calc(100% - 190px);
@@ -35,7 +90,7 @@
 
 .home-floors .floor.f1 .seckill-right .seckill-swiper{
     float: left;
-    width: 800px;
+    width: 1000px;
     height: 100%;
 }
 
@@ -100,4 +155,53 @@
     background-color: #fff;
     color: #b7bcb8;
     text-decoration: line-through;
+}
+
+/* 商品列表 */
+
+.floor.f2 .product-list{
+
+}
+
+.floor.f2 .product-list .list-item{
+    position: relative;
+    float: left;
+    margin: 0 5px 10px;
+    width: 230px;
+    height: 305px;
+    background: white;
+}
+
+.floor.f2 .product-list .list-item-link{
+    display: inline-block;
+}
+
+.floor.f2 .product-list .list-item-img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 40px auto 18px;
+}
+
+.floor.f2 .product-list .list-item-info{
+    padding: 0 16px;
+}
+
+.floor.f2 .product-list .list-item-info .title{
+    height: 40px;
+    font-size:12px;
+    line-height:20px;
+    color: #7d7d7d;
+    word-break:break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.floor.f2 .product-list .list-item-info .price{
+    color: #e33333;
+    font-size: 16px;
+    line-height: 18px;
 }

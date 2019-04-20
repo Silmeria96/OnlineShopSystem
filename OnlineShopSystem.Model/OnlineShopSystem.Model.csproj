@@ -51,8 +51,8 @@
     <Compile Include="Order\ShopCartMain.cs" />
     <Compile Include="Order\ShopCartItem.cs" />
     <Compile Include="Product\BaseProduct.cs" />
-    <Compile Include="Product\BaseProductAttr.cs" />
-    <Compile Include="Product\BaseProductAttrValue.cs" />
+    <Compile Include="Product\BaseCateAttr.cs" />
+    <Compile Include="Product\BaseCateAttrValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SysContext.cs" />
     <Compile Include="SysDbInitializer.cs" />

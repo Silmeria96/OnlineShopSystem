@@ -28,9 +28,9 @@ namespace OnlineShopSystem.Model
 
         public DbSet<BaseProduct> BaseProducts { get; set; }
 
-        public DbSet<BaseProductAttr> BaseProductAttrs { get; set; }
+        public DbSet<BaseCateAttr> BaseProductAttrs { get; set; }
 
-        public DbSet<BaseProductAttrValue> BaseProductAttrValues { get; set; }
+        public DbSet<BaseCateAttrValue> BaseProductAttrValues { get; set; }
 
         #endregion
 

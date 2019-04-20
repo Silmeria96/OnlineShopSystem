@@ -11,14 +11,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - @websiteName</title>
-    <script src="~/Scripts/jquery-1.4.2.min.js"></script>
     @Styles.Render("~/Content/Shared/css")
 </head>
 <body>
     <nav id="header" class="header">
         <div class="top-header">
             <div class="container-wrapper">
-                <div class="wrapper-left" style="margin-left: 210px;">
+                <div class="wrapper-left">
                     <div class="location">
                         <i class="iconfont icon-location"></i>
                         <span id="location-content" class="location-content">北京</span>
@@ -50,6 +49,9 @@
     </nav>
 
     @RenderBody()
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/swiper.min.js"></script>
 
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/modernizr")

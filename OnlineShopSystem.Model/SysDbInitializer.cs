@@ -24,14 +24,16 @@ namespace OnlineShopSystem.Model
                     Account = "admin001",
                     Password = "123123",
                     DisplayName = "1号管理员",
-                    CreateTime = DateTime.Now
+                    CreateTime = DateTime.Now,
+                    AdminLevel = 1
                 },
                 new Administrator
                 {
                     Account = "admin002",
                     Password = "123123",
                     DisplayName = "2号管理员",
-                    CreateTime = DateTime.Now
+                    CreateTime = DateTime.Now,
+                    AdminLevel = 1
                 }
             };
 
@@ -50,7 +52,8 @@ namespace OnlineShopSystem.Model
                     Account = "test001",
                     Password = PasswordHelper.DESEncrypt("123123"),
                     DisplayName = "测试用户1",
-                    CreateTime = DateTime.Now
+                    CreateTime = DateTime.Now,
+                    IsOnline = false
                 },
                 new Customer
                 {
@@ -76,7 +79,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 1,
                 CateName = "家用电器",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(homeAppliance);
@@ -86,7 +89,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 2,
                 CateName = "手机",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(mobilePhone);
@@ -96,7 +99,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 3,
                 CateName = "运营商",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(mobileOperator);
@@ -106,7 +109,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 4,
                 CateName = "数码",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(digitalProduct);
@@ -116,7 +119,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 5,
                 CateName = "电脑",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(computer);
@@ -126,7 +129,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 6,
                 CateName = "办公",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(office);
@@ -136,7 +139,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 7,
                 CateName = "家居",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(homefurnishing);
@@ -146,7 +149,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 8,
                 CateName = "家具",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(furniture);
@@ -156,7 +159,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 9,
                 CateName = "家装",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(homedecoration);
@@ -166,7 +169,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 10,
                 CateName = "厨具",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(kitchenware);
@@ -176,7 +179,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 11,
                 CateName = "服装",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(clothing);
@@ -186,7 +189,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 12,
                 CateName = "鞋子",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(shoes);
@@ -196,7 +199,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 13,
                 CateName = "内衣",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(underClothes);
@@ -206,7 +209,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 14,
                 CateName = "美妆",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(beautyMakeup);
@@ -216,7 +219,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 15,
                 CateName = "个护清洁",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(personalCleaning);
@@ -226,7 +229,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 16,
                 CateName = "宠物",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(pet);
@@ -236,7 +239,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 17,
                 CateName = "箱包",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(pluggageet);
@@ -246,7 +249,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 18,
                 CateName = "钟表",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(timepiece);
@@ -256,7 +259,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 19,
                 CateName = "珠宝",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(jewelry);
@@ -266,7 +269,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 20,
                 CateName = "户外",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(outdoors);
@@ -276,7 +279,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 21,
                 CateName = "运动",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(sports);
@@ -286,7 +289,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 22,
                 CateName = "房产",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(houseproperty);
@@ -296,7 +299,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 23,
                 CateName = "汽车",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(automobile);
@@ -306,7 +309,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 24,
                 CateName = "汽车用具",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(carAppliances);
@@ -316,7 +319,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 25,
                 CateName = "母婴",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(motherToChild);
@@ -326,7 +329,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 26,
                 CateName = "玩具乐器",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(toyMusicalInstrument);
@@ -336,7 +339,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 27,
                 CateName = "食品",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(food);
@@ -346,7 +349,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 28,
                 CateName = "酒类",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(liquor);
@@ -356,7 +359,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 29,
                 CateName = "生鲜",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(fresh);
@@ -366,7 +369,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 30,
                 CateName = "特产",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(specialty);
@@ -376,7 +379,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 31,
                 CateName = "艺术",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(art);
@@ -386,7 +389,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 32,
                 CateName = "礼品",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(gift);
@@ -396,7 +399,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 33,
                 CateName = "鲜花",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(flower);
@@ -406,7 +409,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 34,
                 CateName = "农资",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(agriculture);
@@ -416,7 +419,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 35,
                 CateName = "医药保健",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(healthMedica);
@@ -426,7 +429,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 36,
                 CateName = "图书",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(book);
@@ -436,7 +439,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 37,
                 CateName = "娱乐",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(entertainment);
@@ -446,7 +449,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 38,
                 CateName = "电子书",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(electronicBook);
@@ -456,7 +459,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 39,
                 CateName = "机票",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(airTicket);
@@ -466,7 +469,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 40,
                 CateName = "酒店",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(hotel);
@@ -476,7 +479,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 41,
                 CateName = "旅游",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(travel);
@@ -486,7 +489,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 42,
                 CateName = "生活日用",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(dailyUse);
@@ -496,7 +499,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 43,
                 CateName = "安装维修",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(installRepaireService);
@@ -506,7 +509,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 44,
                 CateName = "清洗保养",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(cleaningMaintenance);
@@ -516,7 +519,7 @@ namespace OnlineShopSystem.Model
                 PID = null,
                 OrderID = 45,
                 CateName = "工业品",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(industrialProducts);
@@ -534,7 +537,7 @@ namespace OnlineShopSystem.Model
                 PID = homeAppliance.CateID,  // 一级分类的ID
                 OrderID = 1,  // 从1到3
                 CateName = "电视",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(television);
@@ -544,7 +547,7 @@ namespace OnlineShopSystem.Model
                 PID = homeAppliance.CateID,
                 OrderID = 2,
                 CateName = "空调",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(airConditioner);
@@ -554,7 +557,7 @@ namespace OnlineShopSystem.Model
                 PID = homeAppliance.CateID,
                 OrderID = 3,
                 CateName = "洗衣机",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(washingMachine);
@@ -568,7 +571,7 @@ namespace OnlineShopSystem.Model
                 PID = mobilePhone.CateID,
                 OrderID = 1,
                 CateName = "智能手机",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(smartPhone);
@@ -578,7 +581,7 @@ namespace OnlineShopSystem.Model
                 PID = mobilePhone.CateID,
                 OrderID = 2,
                 CateName = "游戏手机",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(gamePhone);
@@ -588,7 +591,7 @@ namespace OnlineShopSystem.Model
                 PID = mobilePhone.CateID,
                 OrderID = 3,
                 CateName = "老人机",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(elderPhone);
@@ -602,7 +605,7 @@ namespace OnlineShopSystem.Model
                 PID = computer.CateID,
                 OrderID = 1,
                 CateName = "笔记本",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(laptop);
@@ -612,7 +615,7 @@ namespace OnlineShopSystem.Model
                 PID = computer.CateID,
                 OrderID = 2,
                 CateName = "游戏本",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(gameLaptop);
@@ -622,7 +625,7 @@ namespace OnlineShopSystem.Model
                 PID = computer.CateID,
                 OrderID = 3,
                 CateName = "台式机",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(desktopComputer);
@@ -636,7 +639,7 @@ namespace OnlineShopSystem.Model
                 PID = digitalProduct.CateID,
                 OrderID = 1,
                 CateName = "摄像摄影",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(photography);
@@ -646,7 +649,7 @@ namespace OnlineShopSystem.Model
                 PID = digitalProduct.CateID,
                 OrderID = 2,
                 CateName = "智能设备",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(intelligentDevice);
@@ -656,7 +659,7 @@ namespace OnlineShopSystem.Model
                 PID = digitalProduct.CateID,
                 OrderID = 3,
                 CateName = "电子教育",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(electronicEducation);
@@ -670,7 +673,7 @@ namespace OnlineShopSystem.Model
                 PID = office.CateID,
                 OrderID = 1,
                 CateName = "办公设备",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(officeEquipment);
@@ -680,7 +683,7 @@ namespace OnlineShopSystem.Model
                 PID = office.CateID,
                 OrderID = 2,
                 CateName = "文具",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(stationery);
@@ -690,7 +693,7 @@ namespace OnlineShopSystem.Model
                 PID = office.CateID,
                 OrderID = 3,
                 CateName = "耗材",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(consumptiveMaterial);
@@ -704,7 +707,7 @@ namespace OnlineShopSystem.Model
                 PID = beautyMakeup.CateID,
                 OrderID = 1,
                 CateName = "面部护肤",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(facialskincare);
@@ -714,7 +717,7 @@ namespace OnlineShopSystem.Model
                 PID = beautyMakeup.CateID,
                 OrderID = 2,
                 CateName = "香水彩妆",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(perfumeMakeup);
@@ -728,7 +731,7 @@ namespace OnlineShopSystem.Model
                 PID = sports.CateID,
                 OrderID = 1,
                 CateName = "运动服饰",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(sportswear);
@@ -738,7 +741,7 @@ namespace OnlineShopSystem.Model
                 PID = sports.CateID,
                 OrderID = 2,
                 CateName = "健身训练",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(bodyBuilding);
@@ -748,7 +751,7 @@ namespace OnlineShopSystem.Model
                 PID = sports.CateID,
                 OrderID = 3,
                 CateName = "骑行运动",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(ridingSport);
@@ -762,7 +765,7 @@ namespace OnlineShopSystem.Model
                 PID = outdoors.CateID,
                 OrderID = 1,
                 CateName = "户外鞋服",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(outdoorFootwear);
@@ -772,7 +775,7 @@ namespace OnlineShopSystem.Model
                 PID = outdoors.CateID,
                 OrderID = 2,
                 CateName = "户外装备",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(outdoorgear);
@@ -782,7 +785,7 @@ namespace OnlineShopSystem.Model
                 PID = outdoors.CateID,
                 OrderID = 3,
                 CateName = "垂钓用品",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(fishingrods);
@@ -796,7 +799,7 @@ namespace OnlineShopSystem.Model
                 PID = motherToChild.CateID,
                 OrderID = 1,
                 CateName = "奶粉",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(milkpowder);
@@ -806,7 +809,7 @@ namespace OnlineShopSystem.Model
                 PID = motherToChild.CateID,
                 OrderID = 2,
                 CateName = "尿裤湿巾",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(wetpants);
@@ -816,7 +819,7 @@ namespace OnlineShopSystem.Model
                 PID = motherToChild.CateID,
                 OrderID = 3,
                 CateName = "喂养用品",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(feedingProducts);
@@ -830,7 +833,7 @@ namespace OnlineShopSystem.Model
                 PID = toyMusicalInstrument.CateID,
                 OrderID = 1,
                 CateName = "玩具",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(toys);
@@ -840,7 +843,7 @@ namespace OnlineShopSystem.Model
                 PID = toyMusicalInstrument.CateID,
                 OrderID = 2,
                 CateName = "乐器",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(musicalInstruments);
@@ -854,7 +857,7 @@ namespace OnlineShopSystem.Model
                 PID = food.CateID,
                 OrderID = 1,
                 CateName = "新鲜水果",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(fruit);
@@ -864,7 +867,7 @@ namespace OnlineShopSystem.Model
                 PID = food.CateID,
                 OrderID = 2,
                 CateName = "蔬菜蛋品",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(vegetable_egg);
@@ -874,7 +877,7 @@ namespace OnlineShopSystem.Model
                 PID = food.CateID,
                 OrderID = 3,
                 CateName = "精选肉类",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(selectedMeat);
@@ -888,7 +891,7 @@ namespace OnlineShopSystem.Model
                 PID = agriculture.CateID,
                 OrderID = 1,
                 CateName = "种子",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(seed);
@@ -898,7 +901,7 @@ namespace OnlineShopSystem.Model
                 PID = agriculture.CateID,
                 OrderID = 2,
                 CateName = "农药",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(pesticides);
@@ -908,7 +911,7 @@ namespace OnlineShopSystem.Model
                 PID = agriculture.CateID,
                 OrderID = 3,
                 CateName = "肥料",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(fertilizer);
@@ -922,7 +925,7 @@ namespace OnlineShopSystem.Model
                 PID = healthMedica.CateID,
                 OrderID = 1,
                 CateName = "中西药品",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(pharmaceuticals);
@@ -932,7 +935,7 @@ namespace OnlineShopSystem.Model
                 PID = healthMedica.CateID,
                 OrderID = 2,
                 CateName = "营养健康",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(nutritionHealth);
@@ -942,7 +945,7 @@ namespace OnlineShopSystem.Model
                 PID = healthMedica.CateID,
                 OrderID = 3,
                 CateName = "营养成分",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(nutritionalComponents);
@@ -956,7 +959,7 @@ namespace OnlineShopSystem.Model
                 PID = book.CateID,
                 OrderID = 1,
                 CateName = "文学",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(literature);
@@ -966,7 +969,7 @@ namespace OnlineShopSystem.Model
                 PID = book.CateID,
                 OrderID = 2,
                 CateName = "童书",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(childrenBooks);
@@ -976,7 +979,7 @@ namespace OnlineShopSystem.Model
                 PID = book.CateID,
                 OrderID = 3,
                 CateName = "教材教辅",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(importedTextbook);
@@ -990,7 +993,7 @@ namespace OnlineShopSystem.Model
                 PID = installRepaireService.CateID,
                 OrderID = 1,
                 CateName = "家电安装",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(applianceInstallation);
@@ -1000,7 +1003,7 @@ namespace OnlineShopSystem.Model
                 PID = installRepaireService.CateID,
                 OrderID = 2,
                 CateName = "办公安装",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(officeInstallation);
@@ -1010,7 +1013,7 @@ namespace OnlineShopSystem.Model
                 PID = installRepaireService.CateID,
                 OrderID = 3,
                 CateName = "家具安装",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(furnitureInstallation);
@@ -1024,7 +1027,7 @@ namespace OnlineShopSystem.Model
                 PID = cleaningMaintenance.CateID,
                 OrderID = 1,
                 CateName = "清洗保养",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(cleaning);
@@ -1034,7 +1037,7 @@ namespace OnlineShopSystem.Model
                 PID = cleaningMaintenance.CateID,
                 OrderID = 2,
                 CateName = "特色服务",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(characteristicService);
@@ -1048,7 +1051,7 @@ namespace OnlineShopSystem.Model
                 PID = industrialProducts.CateID,
                 OrderID = 1,
                 CateName = "工具",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(tool);
@@ -1058,7 +1061,7 @@ namespace OnlineShopSystem.Model
                 PID = industrialProducts.CateID,
                 OrderID = 2,
                 CateName = "清洁用品",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(cleaningProducts);
@@ -1068,7 +1071,7 @@ namespace OnlineShopSystem.Model
                 PID = industrialProducts.CateID,
                 OrderID = 3,
                 CateName = "化学品",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(chemical);
@@ -1088,7 +1091,7 @@ namespace OnlineShopSystem.Model
                 PID = television.CateID,
                 OrderID = 1,
                 CateName = "曲面电视",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(televisionChild_1);
@@ -1098,7 +1101,7 @@ namespace OnlineShopSystem.Model
                 PID = television.CateID,
                 OrderID = 1,
                 CateName = "超薄电视",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(televisionChild_2);
@@ -1108,7 +1111,7 @@ namespace OnlineShopSystem.Model
                 PID = television.CateID,
                 OrderID = 1,
                 CateName = "OLED电视",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(televisionChild_3);
@@ -1122,7 +1125,7 @@ namespace OnlineShopSystem.Model
                 PID = airConditioner.CateID,
                 OrderID = 2,
                 CateName = "壁挂式空调",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(airConditionerChild_1);
@@ -1132,7 +1135,7 @@ namespace OnlineShopSystem.Model
                 PID = airConditioner.CateID,
                 OrderID = 2,
                 CateName = "柜式空调",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(airConditionerChild_2);
@@ -1142,7 +1145,7 @@ namespace OnlineShopSystem.Model
                 PID = airConditioner.CateID,
                 OrderID = 2,
                 CateName = "中央空调",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(airConditionerChild_3);
@@ -1156,7 +1159,7 @@ namespace OnlineShopSystem.Model
                 PID = washingMachine.CateID,
                 OrderID = 3,
                 CateName = "滚筒洗衣机",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(washingMachineChild_1);
@@ -1166,7 +1169,7 @@ namespace OnlineShopSystem.Model
                 PID = washingMachine.CateID,
                 OrderID = 3,
                 CateName = "洗烘一体机",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(washingMachineChild_2);
@@ -1176,7 +1179,7 @@ namespace OnlineShopSystem.Model
                 PID = washingMachine.CateID,
                 OrderID = 3,
                 CateName = "迷你洗衣机",
-                Status = true,
+                IsUsed = true,
                 CreateTime = DateTime.Now
             };
             context.BaseCategories.Add(washingMachineChild_3);

@@ -14,10 +14,18 @@ namespace OnlineShopSystem.Model.User
     [Table("Customer")]
     public class Customer : BaseUser
     {
-        public int? Age { get; set; }
-
+        [Display(Name = "出生日期")]
+        [DataType(DataType.Date)]
         public DateTime? Birthday { get; set; }
 
+
+        [Display(Name = "地址")]
+        [DataType(DataType.MultilineText)]
         public string Address { get; set; }
+
+
+        [Display(Name = "电话号码")]
+        [DataType(DataType.PhoneNumber)]
+        public string PhoneNumber { get; set; }
     }
 }

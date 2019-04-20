@@ -11,6 +11,8 @@ namespace OnlineShopSystem.UI.Controllers
         [AllowAnonymous]
         public ActionResult Index(string keyword)
         {
+
+
             return View();
         }
 

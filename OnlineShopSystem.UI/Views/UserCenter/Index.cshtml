@@ -134,6 +134,8 @@
                             font-weight: bold;
                         }
 
+
+        /* 订单及关注区域 */
         .content-screen .floor2 {
             position: relative;
             width: 100%;
@@ -144,22 +146,65 @@
                 top: 0;
                 left: 0;
                 width: 650px;
-                background-color: #ffffff;
             }
 
-            .content-screen .floor2 .title {
-                width: 100%;
-                border-bottom: 1px solid lightgray;
+            .content-screen .floor2 .right {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 280px;
             }
 
-            .content-screen .floor2 .title-content {
-                height: 45px;
-                line-height: 45px;
-                margin: 0 0 0 15px;
+    /* 个人中心通用内容区域 */
+    .general-area {
+        margin-bottom: 20px;
+        background-color: #ffffff;
+    }
+
+        .general-area .title-wrap {
+            padding: 0 20px;
+            height: 55px;
+            line-height: 55px;
+            border-bottom: 1px solid #f0f3ef;
+        }
+
+            .general-area .title-wrap .title {
+                margin: 0;
+                height: 55px;
+                line-height: 55px;
                 font-weight: bold;
             }
+
+        /* 我的订单 -按钮组 */
+        .general-area.order .btn-list{
+            padding: 15px 20px;
+            height: 120px;
+        }
+
+        .general-area.order .btn-item{
+            float: left;
+            margin: 0 15px;
+            width: 90px;
+            height: 90px;
+            text-align: center;
+        }
+
+        .general-area.order .btn-item:hover{
+            box-shadow: 0 0 2px 3px whitesmoke;
+        }
+
+        .general-area.order .btn-item .icon{
+            margin-top: 15px;
+            width: 35px;
+            height:35px;
+        }
+
+        .general-area.order .btn-item .title{
+            margin-top: 5px;
+        }
 </style>
 
+<!--页面容器-->
 <div class="container">
 
     <!--左侧导航-->
@@ -185,6 +230,8 @@
     <!--右侧内容区域-->
     <div class="content-screen">
         <div class="wrap">
+
+            <!--用户信息区域-->
             <div class="floor1">
                 <div class="left">
                     <div class="head-box">
@@ -225,15 +272,87 @@
                     </div>
                 </div>
             </div>
+
+            <!--订单及关注区域-->
             <div class="floor2">
+
+                <!--左侧容器-->
                 <div class="left">
-                    <div class="order-area">
-                        <div class="title">
-                            <h4 class="title-content">我的订单</h4>
+
+                    <!--订单区域-->
+                    <div class="general-area order">
+                        <div class="title-wrap">
+                            <h4 class="title">我的订单</h4>
+                        </div>
+                        <div class="content-wrap">
+                            <div class="btn-list">
+                                <div class="btn-item">
+                                    <a class="btn-item-link" href="#">
+                                        <img class="icon" src="~/Images/UserCenter/待付款.png" alt="X" />
+                                        <p class="title">待付款</p>
+                                    </a>
+                                </div>
+                                <div class="btn-item">
+                                    <a class="btn-item-link" href="#">
+                                        <img class="icon" src="~/Images/UserCenter/待收货.png" alt="X" />
+                                        <p class="title">待收货</p>
+                                    </a>
+                                </div>
+                                <div class="btn-item">
+                                    <a class="btn-item-link" href="#">
+                                        <img class="icon" src="~/Images/UserCenter/待评价.png" alt="X" />
+                                        <p class="title">待评价</p>
+                                    </a>
+                                </div>
+                                <div class="btn-item">
+                                    <a class="btn-item-link" href="#">
+                                        <img class="icon" src="~/Images/UserCenter/退换货.png" alt="X" />
+                                        <p class="title">退换/售后</p>
+                                    </a>
+                                </div>
+                                <div class="btn-item">
+                                    <a class="btn-item-link" href="#">
+                                        <img class="icon" src="~/Images/UserCenter/全部订单.png" alt="X" />
+                                        <p class="title">全部订单</p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!--猜你喜欢-->
+                    <div class="general-area guess-like">
+                        <div class="title-wrap">
+                            <h4 class="title">猜你喜欢</h4>
+                        </div>
+                        <div class="content-wrap">
+
+                        </div>
+                    </div>
+
                 </div>
+
+                <!--右侧容器-->
+                <div class="right">
+
+                    <!--我的关注-->
+                    <div class="general-area order">
+                        <div class="title-wrap">
+                            <h4 class="title">我的关注</h4>
+                        </div>
+                    </div>
+
+                    <!--浏览记录-->
+                    <div class="general-area order">
+                        <div class="title-wrap">
+                            <h4 class="title">浏览记录</h4>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
     </div>
 

@@ -200,3 +200,4 @@ H:\OnlineShopSystem\OnlineShopSystem.UI\bin\OnlineShopSystem.Security.dll
 H:\OnlineShopSystem\OnlineShopSystem.UI\bin\OnlineShopSystem.BLL.pdb
 H:\OnlineShopSystem\OnlineShopSystem.UI\bin\OnlineShopSystem.DAL.pdb
 H:\OnlineShopSystem\OnlineShopSystem.UI\bin\OnlineShopSystem.Security.pdb
+H:\OnlineShopSystem\OnlineShopSystem.UI\bin\Newtonsoft.Json.pdb

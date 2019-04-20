@@ -17,3 +17,6 @@ H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\EntityFramework.xml
 H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
 H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.Security.dll
 H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\OnlineShopSystem.Security.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\Newtonsoft.Json.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\Newtonsoft.Json.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Debug\Newtonsoft.Json.xml
