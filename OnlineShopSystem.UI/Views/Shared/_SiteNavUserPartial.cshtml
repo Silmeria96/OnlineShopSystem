@@ -1,4 +1,6 @@
 ﻿
+<!--网站顶部导航栏 - 用户信息模块-->
+
 @if (Session["UserAccount"] != null && Session["UserDisplayName"] != null)
 {
     @Html.ActionLink("欢迎您，" + Session["UserDisplayName"].ToString() + "!", "Index", "UserCenter", routeValues: null, htmlAttributes: new { title = "Manage" })

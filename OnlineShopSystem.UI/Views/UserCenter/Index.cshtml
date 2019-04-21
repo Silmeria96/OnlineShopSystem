@@ -202,7 +202,92 @@
         .general-area.order .btn-item .title{
             margin-top: 5px;
         }
+
+        /* 猜你喜欢 */
+        .general-area.guess-like .product-list{
+            width: 100%;
+        }
+
+        .general-area.guess-like .product-list .list-item{
+            float: left;
+            margin: 7px;
+            width: 200px;
+            height: 305px;
+        }
+
+        .general-area.guess-like .product-list .list-item-img{
+            display: block;
+            width: 150px;
+            height: 150px;
+            margin: 20px auto 18px;
+        }
+
+        .general-area.guess-like .product-list .list-item-info{
+            padding: 0 10px;
+        }
+
+        .general-area.guess-like .product-list .list-item-info .title{
+            height: 40px;
+            font-size:12px;
+            line-height:20px;
+            color: #7d7d7d;
+            word-break:break-all;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        
+        .general-area.guess-like .product-list .list-item-info .price{
+            color: #e33333;
+            font-size: 16px;
+            line-height: 18px;
+        }
+
+        /* 我的关注 */
+        .general-area.focus .list-item{
+            border-bottom: 1px solid whitesmoke;
+        }
+
+        .general-area.focus .list-item .img-wrap{
+            float: left;
+            padding: 10px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .general-area.focus .list-item .img-wrap .img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .general-area.focus .list-item .text-wrap{
+            float: left;
+            margin: 10px;
+            width: 180px;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .general-area.focus .list-item .text-wrap:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .general-area.focus .list-item .text-wrap .title{
+            overflow: hidden;
+            word-break:break-all;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
 </style>
+
+@Html.Partial("_SearchPartial2")
 
 <!--页面容器-->
 <div class="container">
@@ -326,7 +411,54 @@
                             <h4 class="title">猜你喜欢</h4>
                         </div>
                         <div class="content-wrap">
-
+                            <div class="product-list">
+                                <div class="list-item">
+                                    <a class="list-item-link" href="#">
+                                        <img class="list-item-img" src="~/Images/Home/Products/seckill-item1.jpg" alt="X" />
+                                        <div class="list-item-info">
+                                            <p class="title">俏香阁 坚果年货礼盒2019款 吉祥如意坚果礼盒1583g美味休闲零食礼盒1583克 干果大礼包 2019新款坚果手提袋红色奢华送礼礼盒</p>
+                                            <p class="price"><i>¥</i>1698.00</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="list-item">
+                                    <a class="list-item-link" href="#">
+                                        <img class="list-item-img" src="~/Images/Home/Products/seckill-item1.jpg" alt="X" />
+                                        <div class="list-item-info">
+                                            <p class="title">俏香阁 坚果年货礼盒2019款 吉祥如意坚果礼盒1583g美味休闲零食礼盒1583克 干果大礼包 2019新款坚果手提袋红色奢华送礼礼盒</p>
+                                            <p class="price"><i>¥</i>1698.00</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="list-item">
+                                    <a class="list-item-link" href="#">
+                                        <img class="list-item-img" src="~/Images/Home/Products/seckill-item1.jpg" alt="X" />
+                                        <div class="list-item-info">
+                                            <p class="title">俏香阁 坚果年货礼盒2019款 吉祥如意坚果礼盒1583g美味休闲零食礼盒1583克 干果大礼包 2019新款坚果手提袋红色奢华送礼礼盒</p>
+                                            <p class="price"><i>¥</i>1698.00</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="list-item">
+                                    <a class="list-item-link" href="#">
+                                        <img class="list-item-img" src="~/Images/Home/Products/seckill-item1.jpg" alt="X" />
+                                        <div class="list-item-info">
+                                            <p class="title">俏香阁 坚果年货礼盒2019款 吉祥如意坚果礼盒1583g美味休闲零食礼盒1583克 干果大礼包 2019新款坚果手提袋红色奢华送礼礼盒</p>
+                                            <p class="price"><i>¥</i>1698.00</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="list-item">
+                                    <a class="list-item-link" href="#">
+                                        <img class="list-item-img" src="~/Images/Home/Products/seckill-item1.jpg" alt="X" />
+                                        <div class="list-item-info">
+                                            <p class="title">俏香阁 坚果年货礼盒2019款 吉祥如意坚果礼盒1583g美味休闲零食礼盒1583克 干果大礼包 2019新款坚果手提袋红色奢华送礼礼盒</p>
+                                            <p class="price"><i>¥</i>1698.00</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
                         </div>
                     </div>
 
@@ -336,9 +468,35 @@
                 <div class="right">
 
                     <!--我的关注-->
-                    <div class="general-area order">
+                    <div class="general-area focus">
                         <div class="title-wrap">
                             <h4 class="title">我的关注</h4>
+                        </div>
+                        <div class="content-wrap">
+                            <div class="list focus">
+                                <div class="list-item">
+                                    <a class="list-item-link" href="#">
+                                        <div class="img-wrap">
+                                            <img class="img" src="~/Images/Home/Products/seckill-item1.jpg" alt="X" />
+                                        </div>
+                                        <div class="text-wrap">
+                                            <p class="title">俏香阁 坚果年货礼盒2019款 吉祥如意坚果礼盒1583g美味休闲零食礼盒1583克 干果大礼包 2019新款坚果手提袋红色奢华送礼礼盒</p>
+                                        </div>
+                                        <div style="clear:both;"></div>
+                                    </a>
+                                </div>
+                                <div class="list-item">
+                                    <a class="list-item-link" href="#">
+                                        <div class="img-wrap">
+                                            <img class="img" src="~/Images/Home/Products/seckill-item1.jpg" alt="X" />
+                                        </div>
+                                        <div class="text-wrap">
+                                            <p class="title">俏香阁 坚果年货礼盒2019款 吉祥如意坚果礼盒1583g美味休闲零食礼盒1583克 干果大礼包 2019新款坚果手提袋红色奢华送礼礼盒</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="clear:both;"></div>
                         </div>
                     </div>
 

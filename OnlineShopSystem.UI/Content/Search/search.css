@@ -4,11 +4,13 @@
     margin: 0 auto;
 }
 
+/* 面包屑导航 */
 .crumbs-bar{
     padding-top: 15px;
     margin-bottom: 5px;
 }
 
+/* 商品分类过滤器 */
 .search-cate-selector{
     margin-bottom: 10px;
     width: 100%;
@@ -16,10 +18,12 @@
     background-color: lightgray;
 }
 
+/* 搜索结果容器 */
 .search-result-main{
     width: 100%;
 }
 
+/* 搜索结果容器 - 左侧推荐模块 */
 .search-result-main .aside-box{
     float: left;
     width: 180px;
@@ -79,7 +83,7 @@
 }
 
 
-
+/* 搜索结果容器 - 右侧内容模块 */
 .search-result-main .result-box{
     float: left;
     margin-left: 10px;
@@ -87,11 +91,11 @@
     height: 100%;
 }
 
+/* 搜索结果容器 - 右侧内容模块 - 排序过滤器 */
 .search-result-main .result-box .result-filter{
     margin-bottom: 5px;
     width: 100%;
-    height: 77px;
-    background-color: yellow;
+    height: 38px;
 }
 
 .search-result-main .result-filter .filter-floor{
@@ -129,10 +133,6 @@
     color: #FFF;
 }
 
-.search-result-main .result-filter .filter-floor .price-wrapper{
-
-}
-
 .search-result-main .result-filter .filter-floor .price-box{
     float: left;
 }
@@ -152,9 +152,7 @@
 
 
 
-
-
-
+/* 搜索结果容器 - 右侧内容模块 - 搜索结果列表 */
 .search-result-main .result-box .result-list{
     width: calc(100% + 30px);
     height: calc(100% - 77px);
