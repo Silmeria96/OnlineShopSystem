@@ -10,7 +10,7 @@ namespace OnlineShopSystem.Model
     /// <summary>
     /// 数据库初始化类
     /// </summary>
-    public class SysDbInitializer : DropCreateDatabaseIfModelChanges<SysContext>
+    public class SysDbInitializer : DropCreateDatabaseAlways<SysContext>
     {
         // 数据库初始化数据
         protected override void Seed(SysContext context)
@@ -49,17 +49,17 @@ namespace OnlineShopSystem.Model
             {
                 new Customer
                 {
-                    Account = "test001",
+                    Account = "user1",
                     Password = PasswordHelper.DESEncrypt("123123"),
-                    DisplayName = "测试用户1",
+                    DisplayName = "Silmeria",
                     CreateTime = DateTime.Now,
                     IsOnline = false
                 },
                 new Customer
                 {
-                    Account = "test002",
+                    Account = "user2",
                     Password = PasswordHelper.DESEncrypt("123123"),
-                    DisplayName = "测试用户2",
+                    DisplayName = "Alicia",
                     CreateTime = DateTime.Now
                 }
             };

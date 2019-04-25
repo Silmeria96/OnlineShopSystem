@@ -1,5 +1,4 @@
 ﻿@{
-    ViewBag.Title = "Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -7,20 +6,21 @@
 <link href="~/Content/Search/detail.css" rel="stylesheet" />
 <link href="~/Content/jqzoom/base.css" rel="stylesheet" />
 
-<script src="~/Scripts/jqzoom/jquery.jqzoom.js"></script>
-<script src="~/Scripts/jqzoom/base.js"></script>
-
 @Html.Partial("_SearchPartial")
 
 <div class="detail-wrapper">
+
+    <!--商品基础信息-->
     <div class="product-introduction">
+
+        <!--商品缩略图-->
         <div class="product-preview-wrap">
             <div id="preview" class="spec-preview">
                 <span class="jqzoom">
-                    <img jqimg="Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" />
+                    <img jqimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" />
                 </span>
             </div>
-            <!--缩图开始-->
+            <!--缩图列表-->
             <div class="spec-scroll">
                 <a class="prev">&lt;</a> <a class="next">&gt;</a>
                 <div class="items">
@@ -34,8 +34,9 @@
                     </ul>
                 </div>
             </div>
-            <!--缩图结束-->
         </div>
+
+        <!--商品信息-->
         <div class="product-info-wrap">
             <div class="product-name">
                 欧莱雅(LOREAL)金致臻颜化妆品护肤套装(洁面+活肤水+乳液+眼霜；赠品精华液+精华水+眼霜*2(赠品随机发)）
@@ -53,12 +54,35 @@
 
             </div>
         </div>
+
         <div class="product-recommend-wrap">
 
         </div>
+
     </div>
+
+    <!--商品详细信息模块-->
+    <div class="product-detail">
+
+        <!--同种类推荐-->
+        <div class="same-category-recommend">
+
+        </div>
+
+        <!--商品详情容器-->
+        <div class="module-wrap">
+
+        </div>
+
+    </div>
+
 </div>
 
 
+@section scripts{
 
+    <script src="~/Scripts/jqzoom/jquery.jqzoom.js"></script>
+    <script src="~/Scripts/jqzoom/base.js"></script>
+
+}
 

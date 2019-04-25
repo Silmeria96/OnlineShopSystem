@@ -1,9 +1,10 @@
-﻿
+﻿@using Microsoft.AspNet.Identity
+
 <!--网站顶部导航栏 - 用户信息模块-->
 
-@if (Session["UserAccount"] != null && Session["UserDisplayName"] != null)
+@if (Request.IsAuthenticated)
 {
-    @Html.ActionLink("欢迎您，" + Session["UserDisplayName"].ToString() + "!", "Index", "UserCenter", routeValues: null, htmlAttributes: new { title = "Manage" })
+    @Html.ActionLink("欢迎您，" + User.Identity.GetUserName() + "!", "Index", "UserCenter", routeValues: null, htmlAttributes: new { title = "Manage" })
     @Html.ActionLink("注销", "Logout", "Account", routeValues: null, htmlAttributes: new { id = "top-header-register", @class = "top-header-register" });
 }
 else

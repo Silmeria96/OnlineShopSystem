@@ -11,14 +11,14 @@ namespace OnlineShopSystem.UI.Controllers
         [AllowAnonymous]
         public ActionResult Index(string keyword)
         {
-
-
             return View();
         }
 
         [AllowAnonymous]
-        public ActionResult Detail(string id)
+        public ActionResult Detail(int? id)
         {
+            ViewBag.Title = "化妆品";  // 网页标题
+
             return View();
         }
     }

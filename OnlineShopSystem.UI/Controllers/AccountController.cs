@@ -42,6 +42,7 @@ namespace OnlineShopSystem.UI.Controllers
             if (loginResult.State)
             {
                 // 验证通过，设置登录Session
+                FormsAuthentication.SetAuthCookie(loginResult.UserDisplayName, false);
                 Session["UserAccount"] = loginResult.UserAccount;
                 Session["UserDisplayName"] = loginResult.UserDisplayName;
 
@@ -73,6 +74,8 @@ namespace OnlineShopSystem.UI.Controllers
         // 登出
         public ActionResult Logout()
         {
+            FormsAuthentication.SignOut();
+
             Session.Remove("UserAccount");
             Session.Remove("UserDisplayName");
 
