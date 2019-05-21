@@ -1,4 +1,5 @@
 ﻿using OnlineShopSystem.BLL.Account;
+using OnlineShopSystem.BLL.Model;
 using OnlineShopSystem.Model;
 using OnlineShopSystem.UI.Models;
 using System;
@@ -43,6 +44,7 @@ namespace OnlineShopSystem.UI.Controllers
             {
                 // 验证通过，设置登录Session
                 FormsAuthentication.SetAuthCookie(loginResult.UserDisplayName, false);
+                Session["UID"] = loginResult.UID;
                 Session["UserAccount"] = loginResult.UserAccount;
                 Session["UserDisplayName"] = loginResult.UserDisplayName;
 
@@ -93,7 +95,7 @@ namespace OnlineShopSystem.UI.Controllers
         [HttpPost]
         public ActionResult Register(CustomerRegisterModel model)
         {
-            var registerResult = CustomerRegisterHelper.TryRegister(model.Account, model.Password);
+            RegisterResult registerResult = CustomerRegisterHelper.TryRegister(model.Account, model.Password);
 
             return View(registerResult);
         }

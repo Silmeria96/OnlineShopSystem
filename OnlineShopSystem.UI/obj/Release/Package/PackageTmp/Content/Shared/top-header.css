@@ -1,0 +1,36 @@
+﻿.header{
+    width: 100%;
+}
+
+.top-header{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-header *{
+    color: #999;
+}
+
+.top-header .icon-location{
+    color: #f10215;
+    font-size: 12px;
+}
+
+.top-header .menu-list li{
+    float: left;
+    margin: 0 7px;
+}
+
+.top-header .menu-list li a .iconfont{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.top-header .top-header-register{
+    color: #f10215;
+    margin-left: 5px;
+}

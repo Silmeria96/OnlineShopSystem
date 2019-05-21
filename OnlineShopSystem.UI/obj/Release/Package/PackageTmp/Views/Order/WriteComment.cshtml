@@ -1,0 +1,167 @@
+﻿
+@{
+    ViewBag.Title = "评价订单";
+}
+
+<style>
+    body {
+        background-color: #f5f5f5;
+    }
+
+    .page-container {
+        margin-bottom: 50px;
+    }
+
+    .title-wrap {
+        margin-bottom: 10px;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .order-product-list {
+        width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+        .order-product-list:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+    .list-item {
+        margin-bottom: 15px;
+        padding: 15px;
+        background: #fff;
+    }
+
+        .list-item:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .list-item .left {
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+
+            .list-item .left .thumb {
+                width: 150px;
+                height: 150px;
+            }
+
+        .list-item .right {
+            float: left;
+            margin-left: 20px;
+            width: 60%;
+        }
+
+    .opt-list {
+        margin: 0 auto;
+        padding: 10px 0;
+        width: 1200px;
+        background-color: #fff;
+    }
+
+    .opt-list .opt-submit{
+        margin: 0 auto;
+        width: 200px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #df3033;
+        color: #fff;
+    }
+
+    textarea {
+        padding: 10px;
+        width: 100%;
+    }
+</style>
+
+<!--星级评分-->
+<script src="~/Plugins/star/js/star.js"></script>
+<style>
+    .rating {
+        width: 240px;
+        height: 48px;
+    }
+
+    .rating-item {
+        float: left;
+        width: 47px;
+        height: 47px;
+        background: url(../../Plugins/star/images/icon.png) no-repeat;
+        cursor: pointer;
+    }
+</style>
+
+
+@Html.Partial("_SearchPartial2")
+
+<div class="page-container">
+    
+    <div class="title-wrap">
+        <h3>评价订单</h3>
+        <p>2019-05-16</p>
+    </div>
+
+    <div class="order-product-list">
+        <div class="list-item">
+            <div class="left">
+                <img class="thumb" src="~/Images/Products/huawei_1_main.jpg" alt="Alternate Text" />
+                <p>荣耀10青春版 幻彩渐变 2400万AI自拍 全网通版4GB+64GB 渐变蓝 移动联通电信4G全面屏手机 双卡双待</p>
+            </div>
+            <div class="right">
+
+                <label>商品评分</label>
+                <br />
+                <ul id="rating1" class="rating">
+                    <li class="rating-item" title="很不好"></li>
+                    <li class="rating-item" title="不好"></li>
+                    <li class="rating-item" title="一般"></li>
+                    <li class="rating-item" title="好"></li>
+                    <li class="rating-item" title="很好"></li>
+                </ul>
+
+                <br />
+
+                <label>评论内容</label>
+                <br />
+                <textarea rows="5" placeholder="请输入评论内容"></textarea>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="opt-list">
+        <div id="btnSubmit" class="opt-submit">发表</div>
+    </div>
+
+</div>
+
+@section scripts{
+    
+    <script>
+        $(function () {
+
+            // 星级评分
+            $('.rating').star({
+                mode: 'LightEntire', //整颗星
+                num: 2,
+            });
+
+            // 提交评论
+            $("#btnSubmit").on("click", function () {
+                alert("发表评论成功！");
+            })
+
+        })
+    </script>    
+    
+}

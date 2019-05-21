@@ -1,0 +1,207 @@
+﻿
+/* 通用样式 */
+.home-floors{
+    width: 100%;
+}
+
+.home-floors .floor{
+    margin-bottom: 30px;
+}
+
+.floor .floor-title-wrapper{
+    width: 100%;
+    height: 45px;
+}
+
+.floor .floor-title-wrapper .title{
+    position: relative;
+    margin: 0 auto;
+    width: 210px;
+    height:45px;
+    line-height: 45px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.floor .floor-title-wrapper .title::before{
+    content: '';
+    position: absolute;
+    top: 21px; 
+    left: 0;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: black;
+}
+
+.floor .floor-title-wrapper .title::after{
+    content: '';
+    position: absolute;
+    top: 21px; 
+    right: 0;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: black;
+    top: 19px;  
+}
+
+/* 秒杀区域 */
+.home-floors .floor.f1{
+    height: 275px;
+    margin-bottom: 30px;
+}
+
+.home-floors .floor.f1:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.home-floors .floor.f1 .seckill-left{
+    float: left;
+    width: 190px;
+    height: 100%;
+    background-color: #f10214;
+    color: white;
+    text-align: center;
+}
+
+.seckill-left-link *{
+    color: white;
+}
+
+.seckill-left-link .title{
+    margin-top: 34px;
+    font-size: 34px;
+}
+
+.seckill-left-link .subtitle{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.home-floors .floor.f1 .seckill-right{
+    float: left;
+    width: calc(100% - 190px);
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-swiper{
+    float: left;
+    width: 1000px;
+    height: 100%;
+}
+
+.home-floors .floor.f1 .seckill-right .swiper-slide{
+    width: 200px;
+    background: white;
+    border-left: 1px solid lightgray;
+}
+
+.home-floors .floor.f1 .seckill-right .swiper-slide a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-product-img{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    margin-left: -70px;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-product-title{
+    position: absolute;
+    top: 190px;
+    width: 200px;
+    font-size: 12px;
+    padding: 0 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-product-price{
+    position: absolute;
+    top: 230px;
+    width: 162px;
+    margin: 0 15px;
+    height: 22px;
+    line-height: 22px;
+    background-color: #e6382f;
+    padding: 1px;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-product-price-new{
+    float: left;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.home-floors .floor.f1 .seckill-right .seckill-product-price-origion{
+    float: left;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #b7bcb8;
+    text-decoration: line-through;
+}
+
+/* 商品列表 */
+
+.floor.f2 .product-list{
+
+}
+
+.floor.f2 .product-list .list-item{
+    position: relative;
+    float: left;
+    margin: 0 5px 10px;
+    width: 230px;
+    height: 305px;
+    background: white;
+}
+
+.floor.f2 .product-list .list-item-link{
+    display: inline-block;
+}
+
+.floor.f2 .product-list .list-item-img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 40px auto 18px;
+}
+
+.floor.f2 .product-list .list-item-info{
+    padding: 0 16px;
+}
+
+.floor.f2 .product-list .list-item-info .title{
+    height: 40px;
+    font-size:12px;
+    line-height:20px;
+    color: #7d7d7d;
+    word-break:break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.floor.f2 .product-list .list-item-info .price{
+    color: #e33333;
+    font-size: 16px;
+    line-height: 18px;
+}

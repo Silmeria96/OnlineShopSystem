@@ -44,6 +44,8 @@ namespace OnlineShopSystem.BLL.Account
             {
                 result.State = false;
                 result.Message = "该用户名已存在！";
+
+                return result;
             }
 
             // 新建一个用户

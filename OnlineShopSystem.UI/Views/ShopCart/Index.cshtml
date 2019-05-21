@@ -1,0 +1,245 @@
+﻿
+@{
+    ViewBag.Title = "我的购物车";
+}
+
+<style>
+
+    .container{
+        margin-bottom: 50px;
+    }
+
+    /* 购物车Table */
+
+    .container .shopcart-grid-table{
+        margin-top: 15px;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .container .shopcart-grid-table tr{
+        border: 1px solid lightgray;
+    }
+
+    .shopcart-grid-table .header-row{
+        height: 40px;
+        line-height: 40px;
+        background-color: #f3f3f3;
+    }
+
+    .shopcart-grid-table .col-select{
+        width: 50px;
+        text-align: center;
+    }
+
+    .shopcart-grid-table .col-image{
+        width: 110px;
+    }
+
+    .shopcart-grid-table .col-image img{
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .shopcart-grid-table .col-title{
+        overflow: hidden;
+    }
+
+    .shopcart-grid-table .col-price{
+        width: 100px;
+        overflow: hidden;
+    }
+
+    .shopcart-grid-table .col-price .span-price{
+        color: red;
+    }
+
+    .shopcart-grid-table .col-amount{
+        overflow: hidden;
+    }
+
+    .shopcart-grid-table .col-amount .amount-input{
+        width: 60px;
+    }
+
+    .shopcart-grid-table .col-sum{
+        width: 100px;
+    }
+
+    .shopcart-grid-table .col-sum .col-sum-content{
+        color: red;
+        font-weight: bold;
+    }
+
+    .shopcart-grid-table .col-opt{
+        width: 50px;
+        overflow: hidden;
+    }
+
+    /* 购物车结算栏 */
+
+    .grid-table-opt-container{
+        margin-top: 15px;
+        border: 1px solid lightgray;
+    }
+
+    .grid-table-opt-container:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .grid-table-opt-container .left-wrap{
+        float: left;
+        width: calc(100% - 100px);
+        height: 50px;
+    }
+
+    .grid-table-opt-container .left-wrap .opt-list-wrap{
+        float: left;
+        margin-left: 15px;
+    }
+
+    .opt-list-wrap .opt-item{
+        margin-right: 10px;
+        line-height: 50px;
+    }
+
+    .grid-table-opt-container .left-wrap .sum-wrap{
+        float: right;
+        margin-right: 30px;
+        line-height: 50px;
+    }
+
+    .grid-table-opt-container .left-wrap .sum-wrap .sum-span{
+        color: red;
+        font-weight: bold;
+    }
+
+    .grid-table-opt-container .right-wrap{
+        float: left;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #e54346;
+        color: #fff;
+    }
+
+    .grid-table-opt-container .right-wrap .btnPay{
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+
+</style>
+
+@Html.Partial("_SearchPartial2")
+
+<div id="app">
+    <div class="container">
+
+        <!--购物车Table-->
+        <table class="shopcart-grid-table">
+            <tr class="header-row">
+                <th class="col-select"><input type="checkbox" /></th>
+                <th class="col-image">全选</th>
+                <th class="col-title">商品</th>
+                <th class="col-price">单价</th>
+                <th class="col-amount">数量</th>
+                <th class="col-sum">小计</th>
+                <th class="col-opt">操作</th>
+            </tr>
+            <tr v-for="item in products">
+                <td class="col-select">
+                    <input type="checkbox" />
+                </td>
+                <td class="col-image">
+                    <img class="" v-bind:src="item.ThumbImgUrl" alt="Alternate Text" />
+                </td>
+                <td class="col-title">
+                    <a href="/Search/Detail/1">{{ item.Name }}</a>
+                </td>
+                <td class="col-price">
+                    ￥<span>{{ item.Price }}</span>
+                </td>
+                <td class="col-amount">
+                    <input class="amount-input" type="number" name="name" min="0" v-model="item.Amount" v-on:input="onAmountChange" />
+                </td>
+                <td class="col-sum">
+                    <span class="col-sum-content">￥<span class="sum-amount">{{ item.Price * item.Amount }}</span></span>
+                </td>
+                <td class="col-opt">
+                    <a href="#">删除</a>
+                </td>
+            </tr>
+        </table>
+
+        <!--购物车结算栏-->
+        <div class="grid-table-opt-container">
+            <div class="left-wrap">
+                <div class="opt-list-wrap">
+                    <a class="opt-item" href="#">删除选中项</a>
+                    <a class="opt-item" href="#">清空购物车</a>
+                </div>
+                <div class="sum-wrap">
+                    总计：<span class="sum-span">￥<span>{{ total }}</span></span>
+                </div>
+            </div>
+            <div class="right-wrap">
+                <a class="btnPay" href="/Order/OrderConfirm">去结算</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section scripts{
+
+    <script>
+        new Vue({
+            el: '#app',
+            data(){
+                return {
+                    total: 0,
+                    products: []
+                }
+            },
+            methods: {
+                onAmountChange(e) {
+                    var total_price = 0;
+                    for (i = 0; i < this.products.length; i++) {
+                        total_price += this.products[i].Price * this.products[i].Amount;
+                    }
+                    this.total = total_price;
+                }
+            },
+            created: function () {
+                var vue = this;
+
+                $.ajax({
+                    type: 'GET',
+                    async: false,
+                    url: '/ShopCart/GetList',
+                    success: function (response) {
+                        vue.products = JSON.parse(response).data;
+                    },
+                    error: function (e) {
+                        console.log(e);
+                    }
+                })
+
+                this.onAmountChange()
+            }
+        })
+
+    </script>    
+    
+}
+

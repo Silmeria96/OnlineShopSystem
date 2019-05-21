@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "我的购物车";
+}
+
+<style>
+
+    .container{
+
+    }
+
+    /* 购物车Table */
+
+    .container .shopcart-grid-table{
+        margin-top: 15px;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .container .shopcart-grid-table tr{
+        border: 1px solid lightgray;
+    }
+
+    .shopcart-grid-table .header-row{
+        height: 40px;
+        line-height: 40px;
+        background-color: #f3f3f3;
+    }
+
+    .shopcart-grid-table .col-select{
+        width: 50px;
+    }
+
+    .shopcart-grid-table .col-image{
+        width: 110px;
+    }
+
+    .shopcart-grid-table .col-image img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .shopcart-grid-table .col-title{
+        overflow: hidden;
+    }
+
+    .shopcart-grid-table .col-price{
+        width: 100px;
+        overflow: hidden;
+    }
+
+    .shopcart-grid-table .col-amount{
+        width: 50px;
+        overflow: hidden;
+    }
+
+    .shopcart-grid-table .col-opt{
+        width: 50px;
+        overflow: hidden;
+    }
+
+    /* 购物车结算栏 */
+
+    .grid-table-opt-container{
+        margin-top: 15px;
+        border: 1px solid lightgray;
+    }
+
+    .grid-table-opt-container:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .grid-table-opt-container .left-wrap{
+        float: left;
+        width: calc(100% - 100px);
+        height: 50px;
+    }
+
+    .grid-table-opt-container .left-wrap .opt-list-wrap{
+        float: left;
+        margin-left: 15px;
+    }
+
+    .opt-list-wrap .opt-item{
+        margin-right: 10px;
+        line-height: 50px;
+    }
+
+    .grid-table-opt-container .left-wrap .sum-wrap{
+        float: right;
+        margin-right: 30px;
+        line-height: 50px;
+    }
+
+    .grid-table-opt-container .right-wrap{
+        float: left;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #e54346;
+        color: #fff;
+    }
+
+    .grid-table-opt-container .right-wrap .btnPay{
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+
+</style>
+
+@Html.Partial("_SearchPartial2")
+
+<div class="container">
+
+    <!--购物车Table-->
+    <table class="shopcart-grid-table">
+        <tr class="header-row">
+            <th class="col-select"><input type="checkbox" /></th>
+            <th class="col-image">全选</th>
+            <th class="col-title">商品</th>
+            <th class="col-price">单价</th>
+            <th class="col-amount">数量</th>
+            <th class="col-sum">小计</th>
+            <th class="col-opt">操作</th>
+        </tr>
+        <tr>
+            <td class="col-select"><input type="checkbox" /></td>
+            <td class="col-image">
+                <img class="" src="~/Images/Search/goods1.jpg" alt="Alternate Text" />
+            </td>
+            <td class="col-title">
+                欧莱雅(LOREAL)金致臻颜化妆品护肤套装(洁面+活肤水+乳液+眼霜；赠品精华液+精华水+眼霜*2(赠品随机发)）
+            </td>
+            <td class="col-price">
+                ￥<span>1999</span>
+            </td>
+            <td class="col-amount">
+                <input type="number" name="name" value="1" />
+            </td>
+            <td class="col-sum">
+                ￥<span class="sum-amount">1999</span>
+            </td>
+            <td class="col-opt">
+                <a href="#">删除</a>
+            </td>
+        </tr>
+    </table>
+
+    <!--购物车结算栏-->
+    <div class="grid-table-opt-container">
+        <div class="left-wrap">
+            <div class="opt-list-wrap">
+                <a class="opt-item" href="#">删除选中项</a>
+                <a class="opt-item" href="#">清空购物车</a>
+            </div>
+            <div class="sum-wrap">
+                总计：￥<span>1999</span>
+            </div>
+        </div>
+        <div class="right-wrap">
+            <a class="btnPay" href="#">去结算</a>
+        </div>
+    </div>
+
+</div>
+

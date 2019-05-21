@@ -18,7 +18,7 @@ namespace OnlineShopSystem.UI.Controllers
         // GET: MngBaseCategory
         public ActionResult Index()
         {
-            return View(db.BaseCategories.ToList());
+            return View(db.ProductCategories.ToList());
         }
 
         // GET: MngBaseCategory/Details/5
@@ -28,7 +28,7 @@ namespace OnlineShopSystem.UI.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BaseCategory baseCategory = db.BaseCategories.Find(id);
+            ProductCategory baseCategory = db.ProductCategories.Find(id);
             if (baseCategory == null)
             {
                 return HttpNotFound();
@@ -47,11 +47,11 @@ namespace OnlineShopSystem.UI.Controllers
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CateID,PID,OrderID,CateName,IsUsed,CreateTime,UpdateTime")] BaseCategory baseCategory)
+        public ActionResult Create([Bind(Include = "CateID,PID,OrderID,CateName,IsUsed,CreateTime,UpdateTime")] ProductCategory baseCategory)
         {
             if (ModelState.IsValid)
             {
-                db.BaseCategories.Add(baseCategory);
+                db.ProductCategories.Add(baseCategory);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace OnlineShopSystem.UI.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BaseCategory baseCategory = db.BaseCategories.Find(id);
+            ProductCategory baseCategory = db.ProductCategories.Find(id);
             if (baseCategory == null)
             {
                 return HttpNotFound();
@@ -79,7 +79,7 @@ namespace OnlineShopSystem.UI.Controllers
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CateID,PID,OrderID,CateName,IsUsed,CreateTime,UpdateTime")] BaseCategory baseCategory)
+        public ActionResult Edit([Bind(Include = "CateID,PID,OrderID,CateName,IsUsed,CreateTime,UpdateTime")] ProductCategory baseCategory)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace OnlineShopSystem.UI.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BaseCategory baseCategory = db.BaseCategories.Find(id);
+            ProductCategory baseCategory = db.ProductCategories.Find(id);
             if (baseCategory == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace OnlineShopSystem.UI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            BaseCategory baseCategory = db.BaseCategories.Find(id);
-            db.BaseCategories.Remove(baseCategory);
+            ProductCategory baseCategory = db.ProductCategories.Find(id);
+            db.ProductCategories.Remove(baseCategory);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

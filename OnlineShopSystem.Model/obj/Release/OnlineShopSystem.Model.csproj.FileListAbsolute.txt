@@ -1,0 +1,12 @@
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Release\OnlineShopSystem.Model.dll.config
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Release\OnlineShopSystem.Model.dll
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Release\OnlineShopSystem.Model.pdb
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Release\EntityFramework.dll
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Release\EntityFramework.SqlServer.dll
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Release\OnlineShopSystem.Security.dll
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Release\OnlineShopSystem.Security.pdb
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Release\EntityFramework.xml
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Release\EntityFramework.SqlServer.xml
+H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Release\OnlineShopSystem.Model.csprojResolveAssemblyReference.cache
+H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Release\OnlineShopSystem.Model.dll
+H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Release\OnlineShopSystem.Model.pdb

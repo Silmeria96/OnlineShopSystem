@@ -6,10 +6,16 @@ using System.Web.Mvc;
 
 namespace OnlineShopSystem.UI.Controllers
 {
-    // 用户个人中心控制器
+    /// <summary>
+    /// 用户个人中心控制器
+    /// </summary>
+    [Authorize]
     public class UserCenterController : Controller
     {
-        // “个人中心”页面
+        /// <summary>
+        /// “个人中心”页面
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             // 显示用户昵称
@@ -22,22 +28,59 @@ namespace OnlineShopSystem.UI.Controllers
             return View();
         }
 
-        // “我的订单”页面
-        public ActionResult OrderList()
+        /// <summary>
+        /// 我的评价 - 分部视图
+        /// </summary>
+        /// <returns></returns>
+        public PartialViewResult MyCommentsPartial()
         {
-            return View();
+            return PartialView();
         }
 
-        // 个人信息
+        /// <summary>
+        /// 常购商品 - 分部视图
+        /// </summary>
+        /// <returns></returns>
+        public PartialViewResult MyMostBuyedProductsPartial()
+        {
+            return PartialView();
+        }
+
+        /// <summary>
+        /// 关注的商品 - 分部视图
+        /// </summary>
+        /// <returns></returns>
+        public PartialViewResult MyFocusProductsPartial()
+        {
+            return PartialView();
+        }
+
+        /// <summary>
+        /// 关注的店铺 - 分部视图
+        /// </summary>
+        /// <returns></returns>
+        public PartialViewResult MyFocusShopsPartial()
+        {
+            return PartialView();
+        }
+
+        /// <summary>
+        /// 个人信息 - 分部视图
+        /// </summary>
+        /// <returns></returns>
         public ActionResult MyInfoPatrial()
         {
             return PartialView("_MyInfoPatrial");
         }
 
-        // 收获地址
+        /// <summary>
+        /// 收货地址 - 分部视图
+        /// </summary>
+        /// <returns></returns>
         public ActionResult MyAdressPatrial()
         {
             return PartialView("_MyAddressPatrial");
         }
+
     }
 }

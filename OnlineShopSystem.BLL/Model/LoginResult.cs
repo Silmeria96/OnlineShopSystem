@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace OnlineShopSystem.BLL.Model
 {
-    // 登录结果
-    public class LoginResult : AccountActionResult
+    /// <summary>
+    /// 帐号登录结果
+    /// </summary>
+    public class LoginResult : BaseActionResult
     {
 
     }

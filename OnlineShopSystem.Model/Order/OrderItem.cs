@@ -13,34 +13,26 @@ namespace OnlineShopSystem.Model.Order
     public class OrderItem
     {
         [Key]
-        public int TID { get; set; }
+        public int ID { get; set; }
+
+
+        [Display(Name = "订单主表ID")]
+        public int PID { get; set; }
 
 
         [Display(Name = "用户ID")]
         public int UserID { get; set; }
 
 
-        [Display(Name = "明细序号")]
-        public int OrderNo { get; set; }
-
-
-        [Display(Name = "产品ID")]
+        [Display(Name = "商品ID")]
         public int ProductID { get; set; }
 
 
-        [Display(Name = "产品名称")]
-        public string ProductName { get; set; }
-
-
-        [Display(Name = "产品图片")]
-        public string ProductThumbImgUrl { get; set; }
-
-
-        [Display(Name = "产品单价")]
+        [Display(Name = "商品单价")]
         public double CurrentUnitPrice { get; set; }
 
 
-        [Display(Name = "产品数量")]
+        [Display(Name = "商品数量")]
         public int Quantity { get; set; }
 
 

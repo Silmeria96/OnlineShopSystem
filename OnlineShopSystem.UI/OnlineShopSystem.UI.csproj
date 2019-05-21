@@ -49,19 +49,35 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.OData, Version=5.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.5.3.1\lib\net45\System.Web.Http.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -181,8 +197,17 @@
     <Compile Include="Controllers\FileUploadController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MngBaseCategoryController.cs" />
-    <Compile Include="Controllers\MngBaseProductController.cs" />
+    <Compile Include="Controllers\MngCustomerApiController.cs" />
     <Compile Include="Controllers\MngCustomerController.cs" />
+    <Compile Include="Controllers\MngProductApiController.cs" />
+    <Compile Include="Controllers\MngProductAttrApiController.cs" />
+    <Compile Include="Controllers\MngProductAttrController.cs" />
+    <Compile Include="Controllers\MngProductCateApiController.cs" />
+    <Compile Include="Controllers\MngProductCateController.cs" />
+    <Compile Include="Controllers\MngProductController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\ProductApiController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\ShopCartController.cs" />
     <Compile Include="Controllers\UserCenterController.cs" />
@@ -207,6 +232,12 @@
     <Content Include="Content\iconfont\iconfont.js" />
     <Content Include="Content\iconfont\iconfont.svg" />
     <Content Include="Content\jqzoom\base.css" />
+    <Content Include="Images\Products\huawei_1.jpg" />
+    <Content Include="Images\Products\huawei_1_main.jpg" />
+    <Content Include="Images\Products\huawei_2.jpg" />
+    <Content Include="Images\Products\huawei_2_main.jpg" />
+    <Content Include="Images\Products\tv_1.jpg" />
+    <Content Include="Images\Products\tv_1_main.jpg" />
     <Content Include="Images\site-logo-2.png" />
     <Content Include="Images\UserCenter\全部订单.png" />
     <Content Include="Images\UserCenter\待付款.png" />
@@ -347,6 +378,11 @@
     <Content Include="Images\Search\goods1-main.jpg" />
     <Content Include="Images\Search\goods1.jpg" />
     <Content Include="Images\Search\search-logo.png" />
+    <Content Include="Plugins\star\images\icon.png" />
+    <Content Include="Plugins\star\index.html" />
+    <Content Include="Plugins\star\js\star.js" />
+    <Content Include="Plugins\wangEditor.min.js" />
+    <Content Include="Scripts\axios.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Plugins\layui\font\iconfont.eot" />
@@ -356,6 +392,7 @@
     <Content Include="Content\iconfont\iconfont.ttf" />
     <Content Include="Content\iconfont\iconfont.woff" />
     <Content Include="Content\iconfont\iconfont.woff2" />
+    <None Include="Properties\PublishProfiles\ReleaseConfig.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -372,8 +409,10 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\swiper.min.js" />
+    <Content Include="Scripts\vue.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Upload\Images\QQ图片20190310171111.jpg" />
+    <Content Include="Util\CommonJS.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -394,34 +433,43 @@
     <Content Include="Views\ShopCart\AddToCart.cshtml" />
     <Content Include="Views\Shared\_SearchPartial.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Views\Shared\_SiteNavUserPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout_NavUserPartial.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\UserCenter\Index.cshtml" />
     <Content Include="Views\MngCustomer\Index.cshtml" />
-    <Content Include="user.json" />
-    <Content Include="Views\MngCustomer\Edit.cshtml" />
-    <Content Include="Views\MngCustomer\Create.cshtml" />
-    <Content Include="Views\MngBaseCategory\Create.cshtml" />
-    <Content Include="Views\MngBaseCategory\Delete.cshtml" />
-    <Content Include="Views\MngBaseCategory\Details.cshtml" />
-    <Content Include="Views\MngBaseCategory\Edit.cshtml" />
-    <Content Include="Views\MngBaseCategory\Index.cshtml" />
-    <Content Include="Views\MngBaseProduct\Create.cshtml" />
-    <Content Include="Views\MngBaseProduct\Delete.cshtml" />
-    <Content Include="Views\MngBaseProduct\Details.cshtml" />
-    <Content Include="Views\MngBaseProduct\Edit.cshtml" />
-    <Content Include="Views\MngBaseProduct\Index.cshtml" />
-    <Content Include="Views\UserCenter\OrderList.cshtml" />
     <Content Include="Views\Shared\_SearchPartial2.cshtml" />
-    <Content Include="Views\UserCenter\_MyOrderListPartial.cshtml" />
-    <Content Include="Views\UserCenter\_MyFocusPatrial.cshtml" />
-    <Content Include="Views\UserCenter\_MyInfoPatrial.cshtml" />
-    <Content Include="Views\UserCenter\_MyAddressPatrial.cshtml" />
+    <Content Include="Views\UserCenter\MyInfoPatrial.cshtml" />
+    <Content Include="Views\UserCenter\MyAddressPatrial.cshtml" />
+    <Content Include="Views\ShopCart\Index.cshtml" />
+    <Content Include="Views\Search\ProductCommentPartial.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout_NavPartial.cshtml" />
+    <Content Include="Views\MngProduct\Index.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout_LeftNavPartial.cshtml" />
+    <Content Include="Views\MngProductCate\Index.cshtml" />
+    <Content Include="Views\MngProductAttr\Index.cshtml" />
+    <Content Include="Views\MngProduct\Edit.cshtml" />
+    <Content Include="Views\Shared\_Layout_NavPartial.cshtml" />
+    <Content Include="Views\Shared\_IFrameLayout.cshtml" />
+    <Content Include="Views\Product\ProductIntroductionPartial.cshtml" />
+    <Content Include="Views\Product\ProductSizePartial.cshtml" />
+    <Content Include="Views\Product\ProductCommentsPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout_FooterPartial.cshtml" />
+    <Content Include="Views\Shared\_ErrorLayout.cshtml" />
+    <Content Include="Views\MngProduct\Create.cshtml" />
+    <Content Include="Views\ShopCart\OrderConfirm.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Order\MyOrderListPartial.cshtml" />
+    <Content Include="Views\UserCenter\MyCommentsPartial.cshtml" />
+    <Content Include="Views\UserCenter\MyMostBuyedProductsPartial.cshtml" />
+    <Content Include="Views\UserCenter\MyFocusShopsPartial.cshtml" />
+    <Content Include="Views\UserCenter\MyFocusProductsPartial.cshtml" />
+    <Content Include="Views\Order\OrderConfirm.cshtml" />
+    <Content Include="Views\Order\WriteComment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\Products\" />
     <Folder Include="Upload\Files\" />
+    <Folder Include="Upload\Production\Thumb\" />
     <Folder Include="Views\FileUpload\" />
   </ItemGroup>
   <ItemGroup>
@@ -436,6 +484,10 @@
     <ProjectReference Include="..\OnlineShopSystem.BLL\OnlineShopSystem.BLL.csproj">
       <Project>{e513815a-6f90-45f1-bf09-e7f796256b3f}</Project>
       <Name>OnlineShopSystem.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineShopSystem.DAL\OnlineShopSystem.DAL.csproj">
+      <Project>{4A767B01-6271-4092-ACF4-6952C7B82413}</Project>
+      <Name>OnlineShopSystem.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\OnlineShopSystem.Model\OnlineShopSystem.Model.csproj">
       <Project>{377B2030-FF71-4F87-B160-88F598FC293C}</Project>

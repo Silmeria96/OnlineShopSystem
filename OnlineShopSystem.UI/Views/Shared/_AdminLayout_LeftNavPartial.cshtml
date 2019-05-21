@@ -1,0 +1,112 @@
+﻿
+<!--后台管理模版 - 左侧导航-->
+
+<style>
+
+    .layui-side{
+        background-color: #344058 !important;
+    }
+
+    .layui-nav.layui-nav-tree{
+        background-color: #344058 !important;
+    }
+
+    .layui-nav-tree .layui-this, .layui-nav-tree .layui-this>a, .layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a{
+        background-color: #1E9FFF !important;
+    }
+
+</style>
+
+<div class="layui-side">
+    <div class="layui-side-scroll">
+        <ul class="layui-nav layui-nav-tree" lay-filter="test">
+            <li class="layui-nav-item">
+                <a class="" href="javascript:;">用户管理</a>
+                <dl class="layui-nav-child">
+                    <dd>
+                        @Ajax.ActionLink("基础客户", "Index", "MngCustomer",
+                            new AjaxOptions
+                            {
+                                UpdateTargetId = "module-container",
+                                InsertionMode = InsertionMode.Replace,
+                                HttpMethod = "GET",
+                                LoadingElementId = "loading-ele"
+                            }
+                        )
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">商品管理</a>
+                <dl class="layui-nav-child">
+                    <dd>
+                        @Ajax.ActionLink("商品列表", "Index", "MngProduct",
+                            new AjaxOptions
+                            {
+                                UpdateTargetId = "module-container",
+                                InsertionMode = InsertionMode.Replace,
+                                HttpMethod = "GET",
+                                LoadingElementId = "loading-ele"
+                            }
+                        )
+                    </dd>
+                    <dd>
+                        @Ajax.ActionLink("商品分类", "Index", "MngProductCate",
+                            new AjaxOptions
+                            {
+                                UpdateTargetId = "module-container",
+                                InsertionMode = InsertionMode.Replace,
+                                HttpMethod = "GET",
+                                LoadingElementId = "loading-ele"
+                            }
+                        )
+                    </dd>
+                    <dd>
+                        @Ajax.ActionLink("商品属性", "Index", "MngProductAttr",
+                            new AjaxOptions
+                            {
+                                UpdateTargetId = "module-container",
+                                InsertionMode = InsertionMode.Replace,
+                                HttpMethod = "GET",
+                                LoadingElementId = "loading-ele"
+                            }
+                        )
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                @Ajax.ActionLink("订单管理", "Index", "MngProductAttr",
+                    new AjaxOptions
+                    {
+                        UpdateTargetId = "module-container",
+                        InsertionMode = InsertionMode.Replace,
+                        HttpMethod = "GET",
+                        LoadingElementId = "loading-ele"
+                    }
+                )
+            </li>
+            <li class="layui-nav-item">
+                @Ajax.ActionLink("店铺管理", "Index", "MngProductAttr",
+                    new AjaxOptions
+                    {
+                        UpdateTargetId = "module-container",
+                        InsertionMode = InsertionMode.Replace,
+                        HttpMethod = "GET",
+                        LoadingElementId = "loading-ele"
+                    }
+                )
+            </li>
+            <li class="layui-nav-item">
+                @Ajax.ActionLink("新闻管理", "Index", "MngProductAttr",
+                    new AjaxOptions
+                    {
+                        UpdateTargetId = "module-container",
+                        InsertionMode = InsertionMode.Replace,
+                        HttpMethod = "GET",
+                        LoadingElementId = "loading-ele"
+                    }
+                )
+            </li>
+        </ul>
+    </div>
+</div>

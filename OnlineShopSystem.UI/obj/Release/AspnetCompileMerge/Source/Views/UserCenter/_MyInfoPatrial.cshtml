@@ -1,0 +1,69 @@
+﻿<style>
+    .title-wrap {
+        margin-bottom: 10px;
+        padding: 10px;
+        line-height: 28px;
+        background: #fff;
+    }
+
+        .title-wrap .title {
+            margin: 0;
+        }
+
+        .input-group{
+            position: relative;
+            margin-bottom: 20px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .input-group .title{
+            float: left;
+            width: 100px;
+            text-align: right;
+        }
+
+        .input-group .title .red-dot{
+            color: red;
+        }
+
+        .input-group .content{
+            float: left;
+            min-width: 300px;
+        }
+
+        .input-group .content:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+</style>
+
+<!--模块标题-->
+<div class="title-wrap">
+    <h3 class="title">个人信息</h3>
+</div>
+
+<!--模块内容-->
+<div class="content-wrap">
+    <form action="/" method="post">
+        <div class="input-group">
+            <div class="title">
+                <span class="red-dot">*</span>
+                <label for="Account">用户帐号：</label>
+            </div>
+            <div class="content">
+                <input type="text" disabled name="Account" value="Silmeria9" />
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="title">
+                <span class="red-dot">*</span>
+                <label for="UserName">用户名：</label>
+            </div>
+            <div class="content">
+                <input type="text" disabled name="UserName" value="Silmeria9" />
+            </div>
+        </div>
+    </form>
+</div>

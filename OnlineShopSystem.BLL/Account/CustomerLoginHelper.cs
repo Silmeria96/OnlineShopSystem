@@ -41,6 +41,7 @@ namespace OnlineShopSystem.BLL.Account
             {
                 loginResult.State = true;
                 loginResult.Message = "登录成功";
+                loginResult.UID = user.UserID;
                 loginResult.UserDisplayName = user.DisplayName;
                 loginResult.UserAccount = user.Account;
             }

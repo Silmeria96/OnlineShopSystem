@@ -1,0 +1,174 @@
+﻿@model OnlineShopSystem.Model.Production.Product
+
+@{
+    Layout = "~/Views/Shared/_IFrameLayout.cshtml";
+}
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SubName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SubName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SubName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Describe, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Describe, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Describe, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ThumbImgUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ThumbImgUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ThumbImgUrl, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MainImgUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MainImgUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MainImgUrl, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Stock, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Stock, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Stock, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsUsed, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.IsUsed)
+                    @Html.ValidationMessageFor(model => model.IsUsed, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .detail-list-area{
+                background-color: #f2f2f2;
+            }
+            .detail-list-area .area-title{
+                padding: 5px 15px;
+                background-color: dodgerblue;
+            }
+            .detail-list-area .area-title .title{
+                float: left;
+                width: calc(100% - 100px);
+                color: #fff;
+            }
+            .detail-list-area .area-content{
+                padding: 15px 0;
+            }
+        </style>
+
+        <!--商品分类明细表-->
+        <div class="detail-list-area">
+            <div class="area-title">
+                <h4 class="title">商品分类</h4>
+                <button class="btn btn-default detail-list-add-btn" type="button">+</button>
+                <button class="btn btn-default detail-list-collapse-btn" type="button">...</button>
+            </div>
+            <div class="area-content">
+                <div class="detail-list">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="创建商品" class="btn btn-primary btn-block" />
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts{
+
+    <script src="~/Util/CommonJS.js"></script>
+    <script>
+
+        $(function () {
+            var detail_list_template = '<div class="detail-list-item">' +
+                                            '<div class="form-group">' +
+                                                '<label class="control-label col-md-2">商品分类</label>' +
+                                                '<div class="col-md-8">' +
+                                                    '<input class="form-control" type="text" id="list-item-input-{0}" name="Categories" value="" />' +
+                                                '</div>' +
+                                                '<div class="col-md-2">' +
+                                                    '<button class="btn btn-default btn-data-browser" type="button">...</button>' +  
+                                                '</div>'
+                                            '</div>'
+                                       '</div>';
+
+            // 明细表 - 添加行按钮
+            $(".detail-list-area").on('click', '.detail-list-add-btn', function () {
+                var detail_list_area = $(this).parents('.detail-list-area').eq(0),
+                    detail_list = detail_list_area.children('.area-content').eq(0).children('.detail-list').eq(0),
+                    detail_list_count = detail_list.children('.detail-list-item').length;
+
+                var new_detail_list_item = detail_list_template.format(detail_list_count + 1);
+
+                detail_list.append(new_detail_list_item);
+            })
+
+            // 明细表 - 折叠按钮
+            $(".detail-list-area").on('click', '.detail-list-collapse-btn', function () {
+                var detail_list_area = $(this).parents('.detail-list-area').eq(0),
+                    detail_list_area_content = detail_list_area.children('.area-content').eq(0);
+
+                detail_list_area_content.slideToggle();
+            })
+
+            // 明细表 - 开窗按钮
+            $('body').on('click', '.btn-data-browser', function (e) {
+                var data_browser_template = '<table>' +
+                                                '<th>{0}</th>' +
+
+                                            '</table>';
+
+            })
+
+            
+
+        })
+
+    </script>
+}

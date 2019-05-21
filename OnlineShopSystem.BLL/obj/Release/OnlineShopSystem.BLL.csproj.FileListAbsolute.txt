@@ -1,0 +1,15 @@
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\OnlineShopSystem.BLL.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\OnlineShopSystem.BLL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\Newtonsoft.Json.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\OnlineShopSystem.DAL.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\OnlineShopSystem.Model.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\OnlineShopSystem.Security.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\OnlineShopSystem.DAL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\OnlineShopSystem.Model.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\OnlineShopSystem.Security.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\EntityFramework.xml
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\Newtonsoft.Json.pdb
+H:\OnlineShopSystem\OnlineShopSystem.BLL\bin\Release\Newtonsoft.Json.xml
+H:\OnlineShopSystem\OnlineShopSystem.BLL\obj\Release\OnlineShopSystem.BLL.csprojResolveAssemblyReference.cache
+H:\OnlineShopSystem\OnlineShopSystem.BLL\obj\Release\OnlineShopSystem.BLL.dll
+H:\OnlineShopSystem\OnlineShopSystem.BLL\obj\Release\OnlineShopSystem.BLL.pdb

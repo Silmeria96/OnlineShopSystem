@@ -1,0 +1,211 @@
+﻿
+@{
+    ViewBag.Title = "订单结算页";
+}
+
+<style>
+    /* 页面容器 */
+    .page-container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .page-title {
+        margin-top: 15px;
+    }
+
+    .module-container {
+        margin: 15px 0;
+        padding: 10px 15px;
+        border: 1px solid lightgray;
+    }
+
+        .module-container .module-title {
+            margin: 0 0 10px 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+    /* 收货地址 */
+    .address-list-item {
+        padding: 10px;
+        border: 2px solid red;
+    }
+
+    .product-list-item {
+        height: 120px;
+        padding: 10px;
+        border: 1px solid lightgray;
+    }
+
+    .product-list-item .right{
+        width: calc(100% - 110px);
+    }
+
+        .product-list-item .f2 {
+            clear: both;
+            padding-top: 10px;
+        }
+
+            .product-list-item .f2 .attr-list-item {
+                float: left;
+                margin-right: 10px;
+            }
+
+                .product-list-item .f2 .attr-list-item .name {
+                    font-weight: bold;
+                }
+
+    .product-list-item-col {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .product-list-item .thumb {
+        width: 100px;
+        height: 100px;
+    }
+
+    .product-list-item .left {
+        float: left;
+    }
+
+    .product-list-item .right {
+        float: left;
+    }
+
+    .product-list-item .product-list-item-col.name {
+        width: calc(100% - 300px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 15px;
+    }
+
+    .product-list-item .product-list-item-col.amount{
+        width: 100px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .product-list-item .product-list-item-col.price{
+        width: 100px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        color: red;
+    }
+
+    .module-container.total {
+        background-color: whitesmoke;
+    }
+
+        .module-container.total:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .module-container.total .right {
+            float: right;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .module-container.total .total-price {
+            color: red;
+            font-weight: bold;
+        }
+
+    .submit-container {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+        .submit-container .right {
+            float: right;
+        }
+
+    .btnSubmit {
+        margin-bottom: 15px;
+        width: 135px;
+        height: 36px;
+        line-height: 36px;
+        background-color: #e00;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+
+<div class="page-container">
+    <h4 class="page-title">填写并核对订单信息</h4>
+
+    <div class="module-container receiver">
+        <p class="module-title">收货人信息</p>
+        <div class="address-list">
+            <div class="address-list-item">
+                山东省 青岛市 市南区 浮山公寓超市 17864293208
+            </div>
+        </div>
+    </div>
+
+    <div class="module-container products">
+        <p class="module-title">送货清单</p>
+        <div class="product-list">
+            <div class="product-list-item">
+                <a class="product-list-item-link" href="#">
+                    <div class="left">
+                        <img class="product-list-item-col thumb" src="~/Images/Products/huawei_1.jpg" alt="Alternate Text" />
+                    </div>
+                    <div class="right">
+                        <div class="f1">
+                            <div class="product-list-item-col name">
+                                荣耀10青春版 幻彩渐变 2400万AI自拍 全网通版4GB+64GB 渐变蓝 移动联通电信4G全面屏手机 双卡双待
+                            </div>
+                            <div class="product-list-item-col amount">
+                                x<span>1</span>
+                            </div>
+                            <div class="product-list-item-col price">
+                                ￥<span>1999.00</span>
+                            </div>
+                        </div>
+                        <div class="f2">
+                            <div class="attr-list">
+                                <div class="attr-list-item">
+                                    <span class="name">尺寸</span> : <span class="value">30</span>
+                                </div>
+                                <div class="attr-list-item">
+                                    <span class="name">尺寸</span> : <span class="value">30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="module-container total">
+        <div class="right">
+            <span>应付金额</span>
+            <span class="total-price">￥<span id="total-price">1999.00</span></span>
+        </div>
+        <div class="right">
+            <span>运费</span>
+            <span class="total-price">￥<span id="total-price">0</span></span>
+        </div>
+    </div>
+
+    <div class="submit-container">
+        <div class="right">
+            <div class="btnSubmit">
+                提交订单
+            </div>
+        </div>
+    </div>
+
+</div>

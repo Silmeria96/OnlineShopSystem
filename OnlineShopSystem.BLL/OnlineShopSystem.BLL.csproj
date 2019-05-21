@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -48,12 +49,17 @@
     <Compile Include="Account\CustomerLoginHelper.cs" />
     <Compile Include="Account\CustomerRegisterHelper.cs" />
     <Compile Include="Model\LoginResult.cs" />
-    <Compile Include="Model\AccountActionResult.cs" />
+    <Compile Include="Model\BaseActionResult.cs" />
     <Compile Include="Model\RegisterResult.cs" />
     <Compile Include="Order\OrderHelper.cs" />
-    <Compile Include="Product\CateManager.cs" />
+    <Compile Include="Production\ProductCategoryHelper.cs" />
+    <Compile Include="Production\ProductHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Search\SearchHelper.cs" />
+    <Compile Include="Reflection\ReflectionHelper.cs" />
+    <Compile Include="Search\ISearchHelper.cs" />
+    <Compile Include="Search\ProductSearchHelper.cs" />
+    <Compile Include="Search\PagnationHelper.cs" />
+    <Compile Include="ShopCart\ShopCartHelper.cs" />
     <Compile Include="User\CustomerManager.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -30,11 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\OnlineShopSystem.UI\bin\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,24 +50,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category\BaseCategory.cs" />
+    <Compile Include="Category\ProductCategory.cs" />
+    <Compile Include="DisplayModels\AddToCartModel.cs" />
+    <Compile Include="DisplayModels\ShopCartItemDisplayModel.cs" />
     <Compile Include="Order\OrderMain.cs" />
     <Compile Include="Order\OrderItem.cs" />
     <Compile Include="Order\ShippingAddress.cs" />
-    <Compile Include="Order\ShopCartMain.cs" />
     <Compile Include="Order\ShopCartItem.cs" />
-    <Compile Include="Product\BaseProduct.cs" />
-    <Compile Include="Product\BaseCateAttr.cs" />
-    <Compile Include="Product\BaseCateAttrValue.cs" />
+    <Compile Include="Production\Product.cs" />
+    <Compile Include="Production\ProductAttr.cs" />
+    <Compile Include="Production\ProductAttrDisplayModel.cs" />
+    <Compile Include="Production\ProductAttrValue.cs" />
+    <Compile Include="Production\ProductCateRelation.cs" />
+    <Compile Include="Production\ProductComment.cs" />
+    <Compile Include="Production\ProductDisplayModel.cs" />
+    <Compile Include="Production\ProductThumb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search\SearchKey.cs" />
+    <Compile Include="SellerArea\SellerShop.cs" />
+    <Compile Include="SellerArea\SellerShopProduct.cs" />
     <Compile Include="SysContext.cs" />
     <Compile Include="SysDbInitializer.cs" />
     <Compile Include="User\Administrator.cs" />
     <Compile Include="User\BaseUser.cs" />
     <Compile Include="User\Customer.cs" />
+    <Compile Include="User\CustomerBrowserHistory.cs" />
+    <Compile Include="User\CustomerCollection.cs" />
+    <Compile Include="User\CustomerCommentToProduct.cs" />
+    <Compile Include="User\CustomerShopCart.cs" />
+    <Compile Include="User\Seller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OnlineShopSystem.Security\OnlineShopSystem.Security.csproj">
@@ -69,6 +90,10 @@
       <Name>OnlineShopSystem.Security</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

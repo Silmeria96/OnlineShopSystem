@@ -1,0 +1,460 @@
+﻿@model OnlineShopSystem.Model.Production.ProductDisplayModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Shared/search-partial.css" rel="stylesheet" />
+<link href="~/Content/Search/detail.css" rel="stylesheet" />
+<link href="~/Content/jqzoom/base.css" rel="stylesheet" />
+
+<style>
+    /* 选择商品分类按钮组 */
+
+    .product-attr-list{
+        margin-bottom: 10px;
+    }
+
+    .product-attr-group{
+        margin-bottom: 10px;
+    }
+
+    .product-attr-group:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .product-attr-group .attr-name{
+        float: left;
+        margin-right: 15px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .product-attr-group .attr-value-list{
+        float: left;
+        width: calc(100% - 63px);
+        min-height: 40px;
+    }
+
+    .product-attr-group .attr-value-list{
+
+    }
+
+    .product-attr-group .attr-value-list::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .product-attr-group .attr-value-item{
+        display: inline-block;
+        padding: 0 10px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #ccc;
+    }
+
+    .product-attr-group .attr-value-item.selected{
+        border: 1px solid red;
+    }
+
+
+    /* 商品操作按钮组 */
+
+    .product-operator .operate-btn{
+        display: inline-block;
+        padding: 0 26px;
+        width: 150px;
+        height: 46px;
+        line-height: 46px;
+        background-color: #df3033;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .operate-btn.addToCart:hover{
+        color: #fff;
+    }
+
+    #product-amount-input{
+        display: inline-block;
+        margin-right: 10px;
+        width: 46px;
+        height: 46px;
+    }
+
+    /* 商品详情主容器 */
+
+    .product-detail-container{
+        height: 600px;
+    }
+
+    /* 商品详情左右容器 */
+
+    .detail-left-wrap{
+        float: left;
+        width: 210px;
+    }
+
+    .detail-right-wrap{
+        float: left;
+        margin-left: 10px;
+        width: calc(100% - 220px);
+        height: auto;
+    }
+
+    /* 基础模块样式 */
+
+    .basic-wrap{
+        margin-bottom: 10px;
+        width: 100%;
+        border: 1px solid #eee;
+    }
+
+    .basic-wrap-title{
+        height: 40px;
+        padding: 10px;
+        line-height: 20px;
+        background-color: #f7f7f7;
+    }
+
+    .basic-wrap-content{
+        padding: 10px;
+    }
+
+    .detail-right-nav{
+        background-color: #f7f7f7;
+        border-bottom: 1px solid #e4393c;
+    }
+
+    .detail-right-nav .nav-item{
+        display: inline-block;
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .detail-right-nav .nav-item.active{
+        background-color: #e4393c;
+        color: #fff;
+    }
+
+    /* 商品推荐 */
+
+    .recommend-list .list-item{
+        margin-bottom: 10px;
+    }
+
+    .recommend-list .list-item .img-wrap{
+        width: 100%;
+    }
+
+    .recommend-list .list-item .img-wrap img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .recommend-list .list-item .content .title{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    /* 商品信息分部视图容器 */
+
+    .detail-right-wrap .detail-right-container{
+        height: calc(100% - 41px);
+        background-color: #fff;
+    }
+
+</style>
+
+<!--搜索栏-->
+@Html.Partial("_SearchPartial")
+
+<!--商品信息-->
+<div class="detail-wrapper">
+
+    <!--商品基础信息-->
+    <div class="product-introduction">
+
+        <!--商品缩略图-->
+        <div class="product-preview-wrap">
+            <div id="preview" class="spec-preview">
+                <span class="jqzoom">
+                    <!--jqimg：放大查看的图片  src：左侧未放大图片-->
+                    <img jqimg="@Model.MainImgUrl" src="@Model.ThumbImgUrl" />
+                </span>
+            </div>
+            <!--缩图列表-->
+            <div class="spec-scroll">
+                <a class="prev">&lt;</a> <a class="next">&gt;</a>
+                <div class="items">
+                    <ul>
+                        <li><img alt="暂无商品图片" bimg="@Model.MainImgUrl" src="@Model.ThumbImgUrl" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="@Model.MainImgUrl" src="@Model.ThumbImgUrl" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="@Model.MainImgUrl" src="@Model.ThumbImgUrl" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="@Model.MainImgUrl" src="@Model.ThumbImgUrl" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="@Model.MainImgUrl" src="@Model.ThumbImgUrl" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="@Model.MainImgUrl" src="@Model.ThumbImgUrl" onmousemove="preview(this);"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--商品信息-->
+        <div class="product-info-wrap">
+            <div class="product-name">
+                @Model.Name
+            </div>
+            <div class="product-price">
+                <div class="product-price-title">价格</div>
+                <div class="product-price-box">
+                    <span>
+                        <span>￥</span>
+                        <span class="product-price-value">@Model.Price.ToString("f2")</span>
+                    </span>
+                </div>
+            </div>
+            <div class="product-attr-list">
+                @if (Model.Attributes != null)
+                {
+                    foreach (var attr in Model.Attributes)
+                    {
+                        <div class="product-attr-group">
+                            <div class="attr-name">
+                                选择<span>@attr.Name</span>
+                            </div>
+                            <div class="attr-value-list">
+                                @if (attr.Values != null)
+                                {
+                                    foreach (var attr_value in attr.Values)
+                                    {
+                                        if (attr_value.ProductAttrID == attr.ID)
+                                        {
+                                            <a class="attr-value-item" data-attrId="@attr.ID" data-attrValueId="@attr_value.ProductAttrID" data-price="@attr_value.ExtraPrice" href="#">@attr_value.Value</a>
+                                        }
+                                    }
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <hr />
+            <!--商品操作按钮组-->
+            <div class="product-operator">
+                <input id="product-amount-input" type="number" min="0" value="0" />
+                <a id="btnAddToCart" class="operate-btn addToCart" href="">加入购物车</a>
+            </div>
+        </div>
+
+        <!--右侧商品推荐模块-->
+        <div class="product-recommend-wrap">
+            
+        </div>
+
+        <div style="clear:both;"></div>
+
+    </div>
+
+    <!--商品详细信息模块-->
+    <div class="product-detail-container">
+
+        <!--左侧-->
+        <div class="detail-left-wrap">
+
+            <!--商家信息-->
+            <div class="basic-wrap seller-shop">
+                <div class="basic-wrap-title">
+                    <a href="#">欧莱雅京东自营官方旗</a>
+                </div>
+                <div class="basic-wrap-content">
+                    <a class="btn1" href="#">进店逛逛</a>
+                    <a class="btn2" href="#">关注店铺</a>
+                </div>
+            </div>
+
+            <!--商品推荐-->
+            <div class="basic-wrap seller-shop">
+                <div class="basic-wrap-title">
+                    <a href="#">商品推荐</a>
+                </div>
+                <div class="basic-wrap-content">
+                    <div class="recommend-list">
+                        @if (ViewBag.LeftRecommendList != null)
+                        {
+                            foreach (var item in ViewBag.LeftRecommendList)
+                            {
+                                <div class="list-item">
+                                    <a class="list-item-link" href="/Search/Detail/@item.ProductID">
+                                        <div class="img-wrap">
+                                            <img src="@item.ThumbImgUrl" />
+                                        </div>
+                                        <div class="content">
+                                            <p class="title">@item.Name</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <p>暂无推荐！</p>
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--右侧-->
+        <div class="detail-right-wrap">
+
+            <!--导航-->
+            <div class="detail-right-nav">
+                @Ajax.ActionLink("商品介绍", "ProductIntroductionPartial", "Product",
+                   new
+                   {
+                       productId = Model.ProductID
+                   },
+                   new AjaxOptions
+                   {
+                       UpdateTargetId = "detail-right-container",
+                       InsertionMode = InsertionMode.Replace,
+                       HttpMethod = "GET"
+                   }, new { @class = "nav-item active" })
+                @Ajax.ActionLink("规格包装", "ProductSizePartial", "Product",
+                   new
+                   {
+                       productId = Model.ProductID
+                   },
+                   new AjaxOptions
+                   {
+                       UpdateTargetId = "detail-right-container",
+                       InsertionMode = InsertionMode.Replace,
+                       HttpMethod = "GET"
+                   }, new { @class = "nav-item" })
+                @Ajax.ActionLink("商品评价", "ProductCommentsPartial", "Product",
+                   new
+                   {
+                       productId = Model.ProductID
+                   },
+                   new AjaxOptions
+                   {
+                       UpdateTargetId = "detail-right-container",
+                       InsertionMode = InsertionMode.Replace,
+                       HttpMethod = "GET"
+                   }, new { @class= "nav-item" })
+            </div>
+
+            <!--分部视图容器-->
+            <div id="detail-right-container" class="detail-right-container">
+                @Html.Action("ProductIntroductionPartial", "Product", new { productId = Model.ProductID })
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+@section scripts{
+
+    <script src="~/Scripts/jqzoom/jquery.jqzoom.js"></script>
+    <script src="~/Scripts/jqzoom/base.js"></script>
+    <script>
+
+        $(function () {
+
+            // 选择的商品属性
+            var selected_attrs = [];
+
+            // 选择商品属性
+            $(".attr-value-item").on("click",function(e){
+                var attr_id = $(this).data('attrid'),
+                    attr_value_id = $(this).data('attrvalueid');
+
+                // 选择属性值
+                if($(this).hasClass('selected')){
+                    $.each(selected_attrs,function(item,index){
+                        if(item.name == attr_id){
+                            selected_attrs.splice(index,1);
+                        }
+                    })
+                }
+                else{
+                    var attr_item = {
+                        name: attr_id,
+                        value: attr_value_id
+                    };
+                    selected_attrs.push(attr_item);
+                }
+
+                // 更新自己及同类属性样式
+                $.each($(".attr-value-item"),function(item,index){
+                    var attr_item = $(".attr-value-item").eq(index);
+                    if(attr_item.data('attrName') == attr_id){
+                        attr_item.removeClass('selected');
+                    }
+                });
+                $(this).addClass('selected');
+            })
+
+
+            // 加入购物车按钮点击事件
+            $("#btnAddToCart").on('click', function (e) {
+                var productId = @Model.ProductID,
+                    userId = @ViewBag.UID,
+                    amount = $("#product-amount-input").val();
+
+                e.preventDefault();
+
+                // 商品数量至少为1
+                if(amount == 0){
+                    alert("请先选择商品数量");
+                    return;
+                }
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/ShopCart/TryAddToCart',
+                    data: {
+                        ProductID: productId,
+                        UserID: userId,
+                        ProductAttrsJson: JSON.stringify(selected_attrs),
+                        Amount: amount
+                    },
+                    success: function(response){
+                        if(response == "True"){
+                            window.location.href = '/ShopCart/AddToCart?result=true';
+                        }
+                        else{
+                            window.location.href = '/ShopCart/AddToCart?result=false';
+                        }
+                    },
+                    error: function(e){
+                        console.log(e);
+                    }
+                })
+            })
+
+
+            // 商品介绍信息导航 - 切换效果
+            $('.nav-item').on('click', function (e) {
+                $('.nav-item').removeClass('active');
+                $(this).addClass('active');
+            })
+
+        })
+
+    </script>
+
+}
+

@@ -43,8 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\CustomerDAL.cs" />
     <Compile Include="BaseDAL.cs" />
     <Compile Include="DbHelper.cs" />
+    <Compile Include="Production\ProductAttrDAL.cs" />
+    <Compile Include="Production\ProductAttrValueDAL.cs" />
+    <Compile Include="Production\ProductCateDAL.cs" />
+    <Compile Include="Production\ProductCateRelationDAL.cs" />
+    <Compile Include="Production\ProductDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

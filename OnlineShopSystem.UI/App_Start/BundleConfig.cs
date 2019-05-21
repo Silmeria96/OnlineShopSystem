@@ -22,6 +22,7 @@ namespace OnlineShopSystem.UI
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/jquery.unobtrusive-ajax.js",
                       "~/Scripts/swiper.js",
                       "~/Scripts/respond.js"));
 

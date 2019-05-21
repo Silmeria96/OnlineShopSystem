@@ -1,0 +1,12 @@
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Release\OnlineShopSystem.DAL.dll
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Release\OnlineShopSystem.DAL.pdb
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Release\EntityFramework.dll
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Release\OnlineShopSystem.Model.dll
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Release\OnlineShopSystem.Security.dll
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Release\OnlineShopSystem.Model.pdb
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Release\EntityFramework.xml
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Release\OnlineShopSystem.Security.pdb
+H:\OnlineShopSystem\OnlineShopSystem.DAL\bin\Release\zh-Hans\EntityFramework.resources.dll
+H:\OnlineShopSystem\OnlineShopSystem.DAL\obj\Release\OnlineShopSystem.DAL.csprojResolveAssemblyReference.cache
+H:\OnlineShopSystem\OnlineShopSystem.DAL\obj\Release\OnlineShopSystem.DAL.dll
+H:\OnlineShopSystem\OnlineShopSystem.DAL\obj\Release\OnlineShopSystem.DAL.pdb

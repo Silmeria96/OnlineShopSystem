@@ -4,14 +4,15 @@ d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSyste
 d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.csprojResolveAssemblyReference.cache
 d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.dll
 d:\backup\documents\visual studio 2015\Projects\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.pdb
+H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.csprojResolveAssemblyReference.cache
 H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\OnlineShopSystem.Model.dll.config
 H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\OnlineShopSystem.Model.dll
 H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\OnlineShopSystem.Model.pdb
 H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\EntityFramework.dll
-H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.dll
-H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.pdb
-H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\EntityFramework.xml
-H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
-H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.csprojResolveAssemblyReference.cache
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\EntityFramework.SqlServer.dll
 H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\OnlineShopSystem.Security.dll
 H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\OnlineShopSystem.Security.pdb
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\EntityFramework.xml
+H:\OnlineShopSystem\OnlineShopSystem.Model\bin\Debug\EntityFramework.SqlServer.xml
+H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.dll
+H:\OnlineShopSystem\OnlineShopSystem.Model\obj\Debug\OnlineShopSystem.Model.pdb

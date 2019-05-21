@@ -9,11 +9,16 @@ using System.Web.Mvc;
 
 namespace OnlineShopSystem.UI.Controllers
 {
-    // 文件上传控制器
-
+    /// <summary>
+    /// 文件上传控制器
+    /// </summary>
     public class FileUploadController : Controller
     {
-        // 上传图片
+        /// <summary>
+        /// 上传图片
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns></returns>
         [HttpPost]
         public JObject UploadImage(HttpPostedFileBase img)
         {
@@ -45,6 +50,7 @@ namespace OnlineShopSystem.UI.Controllers
 
             return result;
         }
+
 
     }
 }

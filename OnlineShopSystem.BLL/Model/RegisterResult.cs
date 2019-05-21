@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace OnlineShopSystem.BLL.Model
 {
-    // 注册结果
-    public class RegisterResult : AccountActionResult
+    /// <summary>
+    /// 帐号注册结果
+    /// </summary>
+    public class RegisterResult : BaseActionResult
     {
+
     }
 }

@@ -1,0 +1,22 @@
+﻿@model OnlineShopSystem.Model.Production.Product
+
+<style>
+    .describe-container{
+        padding: 15px;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+    }
+</style>
+
+<div class="describe-container">
+    @if (Model != null && !string.IsNullOrEmpty(Model.Describe))
+    {
+        @Html.Raw(Model.Describe)
+    }
+    else
+    {
+        <h3 style="text-align: center;">此商品暂无介绍信息，请联系店主</h3>
+    }
+</div>
+

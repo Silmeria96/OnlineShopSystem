@@ -1,0 +1,203 @@
+﻿@model OnlineShopSystem.Model.Production.Product
+
+@{
+    Layout = "~/Views/Shared/_IFrameLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ProductID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SubName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SubName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SubName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Describe, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Describe, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Describe, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2">详细描述</label>
+            <div class="col-md-10">
+                <div id="editor">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">图片预览</label>
+            <div class="col-md-10">
+                <img id="img-preview" style="width:150px; height:150px;" src="@Model.ThumbImgUrl" alt="X" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">上传图片</label>
+            <div class="col-md-8">
+                <input id="img-upload-file" class="form-control" type="file" name="img" value="" />
+            </div>
+            <div class="col-md-2">
+                <button id="btnImgUpload" class="btn btn-default" type="button">上传图片</button>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ThumbImgUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ThumbImgUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ThumbImgUrl, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MainImgUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MainImgUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MainImgUrl, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Stock, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Stock, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Stock, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsUsed, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.IsUsed)
+                    @Html.ValidationMessageFor(model => model.IsUsed, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="btnSubmit" type="button" value="保存修改" class="btn btn-primary btn-block" />
+            </div>
+        </div>
+    </div>
+
+}
+
+@section scripts{
+
+    <!--提交表单-->
+    <script>
+
+        $(function () {
+
+            // 提交按钮
+            $("#btnSubmit").on("click", function (e) {
+
+                e.preventDefault();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/MngProduct/Edit',
+                    data: $("form").serialize(),
+                    success: function (action) {
+                        var result = eval('(' + action + ')');
+                        alert(result.msg);
+                    },
+                    error: function (e) {
+                        alert("保存过程中发生了错误");
+                        console.log(e);
+                    }
+                })
+
+            })
+
+        })
+
+    </script>
+
+    <!--上传图片-->
+    <script>
+        $(function () {
+
+            var imgPreview = $("#img-preview"),
+                imgUploadInput = $('#img-upload-file')[0],
+                imgUrlInput = $("#ThumbImgUrl").eq(0);
+
+            // 上传图片按钮
+            $("#btnImgUpload").on('click', function () {
+                var formData = new FormData();
+                formData.append('img', imgUploadInput.files[0]);  //添加图片信息的参数
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/FileUpload/UploadImage',
+                    data: formData,
+                    cache: false,
+                    processData: false, // 告诉jQuery不要去处理发送的数据
+                    contentType: false, // 告诉jQuery不要去设置Content-Type请求头
+                    success: function (data) {
+                        var result = eval('(' + data + ')');
+
+                        alert(result.msg);
+
+                        if (result.flag) {
+                            imgPreview.attr('src', result.path);
+                            imgUrlInput.val(result.path);
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e);
+                    }
+                })
+            })
+
+        })
+    </script>
+
+    <!--富文本编辑-->
+    <script src="~/Plugins/wangEditor.min.js"></script>
+    <script type="text/javascript">
+
+        var E = window.wangEditor;
+        var editor = new E('#editor');
+        var $text1 = $('#Describe');
+        editor.customConfig.onchange = function (html) {
+            $text1.val(html)
+        }
+        editor.create();
+        editor.txt.html($text1.val());
+
+    </script>
+
+}

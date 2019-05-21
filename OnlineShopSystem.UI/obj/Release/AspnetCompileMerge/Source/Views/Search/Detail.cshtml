@@ -1,0 +1,301 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Shared/search-partial.css" rel="stylesheet" />
+<link href="~/Content/Search/detail.css" rel="stylesheet" />
+<link href="~/Content/jqzoom/base.css" rel="stylesheet" />
+
+<style>
+    /* 选择商品分类按钮组 */
+
+    .product-attr-list{
+        margin-bottom: 10px;
+    }
+
+    .product-attr-group{
+
+    }
+
+    .product-attr-group:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .product-attr-group .attr-name{
+        float: left;
+        margin-right: 15px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .product-attr-group .attr-value-list{
+        float: left;
+        width: calc(100% - 63px);
+        min-height: 40px;
+    }
+
+    .product-attr-group .attr-value-list{
+
+    }
+
+    .product-attr-group .attr-value-list::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .product-attr-group .attr-value-item{
+        display: inline-block;
+        padding: 0 10px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #ccc;
+    }
+
+    /* 商品操作按钮组 */
+
+    .product-operator{
+
+    }
+
+    .product-operator .operate-btn{
+        display: inline-block;
+        padding: 0 26px;
+        width: 150px;
+        height: 46px;
+        line-height: 46px;
+        background-color: #df3033;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .operate-btn.addToCart:hover{
+        color: #fff;
+    }
+
+    #product-amount-input{
+        display: inline-block;
+        margin-right: 10px;
+        width: 46px;
+        height: 46px;
+    }
+
+    /* 商品详情主容器 */
+
+    .product-detail-container{
+        height: 600px;
+    }
+
+    /* 商品详情左右容器 */
+
+    .detail-left-wrap{
+        float: left;
+        width: 210px;
+    }
+
+    .detail-right-wrap{
+        float: left;
+        margin-left: 10px;
+        width: calc(100% - 220px);
+        height: 600px;
+        background-color: whitesmoke;
+    }
+
+    /* 基础模块样式 */
+
+    .basic-wrap{
+        margin-bottom: 10px;
+        width: 100%;
+        border: 1px solid #eee;
+    }
+
+    .basic-wrap-title{
+        height: 40px;
+        padding: 10px;
+        line-height: 20px;
+        background-color: #f7f7f7;
+    }
+
+    .basic-wrap-content{
+        height: 40px;
+        padding: 10px;
+        height: 150px;
+    }
+
+    .detail-right-nav{
+        background-color: #f7f7f7;
+        border-bottom: 1px solid #e4393c;
+    }
+
+    .detail-right-nav .nav-item{
+        display: inline-block;
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .detail-right-nav .nav-item.active{
+        background-color: #e4393c;
+        color: #fff;
+    }
+
+</style>
+
+@Html.Partial("_SearchPartial")
+
+<div class="detail-wrapper">
+
+    <!--商品基础信息-->
+    <div class="product-introduction">
+
+        <!--商品缩略图-->
+        <div class="product-preview-wrap">
+            <div id="preview" class="spec-preview">
+                <span class="jqzoom">
+                    <img jqimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" />
+                </span>
+            </div>
+            <!--缩图列表-->
+            <div class="spec-scroll">
+                <a class="prev">&lt;</a> <a class="next">&gt;</a>
+                <div class="items">
+                    <ul>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="暂无商品图片" bimg="~/Images/Search/goods1-main.jpg" src="~/Images/Search/goods1-main.jpg" onmousemove="preview(this);"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--商品信息-->
+        <div class="product-info-wrap">
+            <div class="product-name">
+                欧莱雅(LOREAL)金致臻颜化妆品护肤套装(洁面+活肤水+乳液+眼霜；赠品精华液+精华水+眼霜*2(赠品随机发)）
+            </div>
+            <div class="product-price">
+                <div class="product-price-title">价格</div>
+                <div class="product-price-box">
+                    <span>
+                        <span>￥</span>
+                        <span class="product-price-value">819.00</span>
+                    </span>
+                </div>
+            </div>
+            <div class="product-attr-list">
+                <div class="product-attr-group">
+                    <div class="attr-name">
+                        <span>选择套装</span>
+                    </div>
+                    <div class="attr-value-list">
+                        <a class="attr-value-item" href="#">洁面乳 125ml</a>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <!--商品操作按钮组-->
+            <div class="product-operator">
+                <input id="product-amount-input" type="number" min="0" value="0" />
+                <a class="operate-btn addToCart" href="/ShopCart/AddToCart">加入购物车</a>
+            </div>
+        </div>
+
+        <div class="product-recommend-wrap">
+
+        </div>
+
+        <div style="clear:both;"></div>
+
+    </div>
+
+    <!--商品详细信息模块-->
+    <div class="product-detail-container">
+
+        <!--左侧-->
+        <div class="detail-left-wrap">
+
+            <!--商家信息-->
+            <div class="basic-wrap seller-shop">
+                <div class="basic-wrap-title">
+                    <a href="#">欧莱雅京东自营官方旗</a>
+                </div>
+                <div class="basic-wrap-content">
+                    <a class="btn1" href="#">进店逛逛</a>
+                    <a class="btn2" href="#">关注店铺</a>
+                </div>
+            </div>
+
+            <!--商品推荐-->
+            <div class="basic-wrap seller-shop">
+                <div class="basic-wrap-title">
+                    <a href="#">商品推荐</a>
+                </div>
+                <div class="basic-wrap-content">
+                    <a class="btn1" href="#">进店逛逛</a>
+                    <a class="btn2" href="#">关注店铺</a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!--右侧-->
+        <div class="detail-right-wrap">
+            <div class="detail-right-nav">
+                @Ajax.ActionLink("商品介绍", "UserInfoPartial", "",
+                   new AjaxOptions
+                   {
+                       UpdateTargetId = "partial-container",
+                       InsertionMode = InsertionMode.Replace,
+                       HttpMethod = "GET"
+                   }, new { @class = "nav-item" })
+                @Ajax.ActionLink("规格包装", "UserInfoPartial", "",
+                   new AjaxOptions
+                   {
+                       UpdateTargetId = "partial-container",
+                       InsertionMode = InsertionMode.Replace,
+                       HttpMethod = "GET"
+                   }, new { @class = "nav-item" })
+                @Ajax.ActionLink("商品评价", "UserInfoPartial", "",
+                   new AjaxOptions
+                   {
+                       UpdateTargetId = "partial-container",
+                       InsertionMode = InsertionMode.Replace,
+                       HttpMethod = "GET"
+                   }, new { @class= "nav-item" })
+                <a class="nav-item active" href="#">商品介绍</a>
+                <a class="nav-item" href="#">规格包装</a>
+                <a class="nav-item" href="#">商品评价</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+@section scripts{
+
+    <script src="~/Scripts/jqzoom/jquery.jqzoom.js"></script>
+    <script src="~/Scripts/jqzoom/base.js"></script>
+
+    <script>
+
+        $(function () {
+            $('.nav-item').on('click', function (e) {
+                $('.nav-item').removeClass('active');
+                $(this).addClass('active');
+            })
+        })
+
+    </script>
+
+}
+

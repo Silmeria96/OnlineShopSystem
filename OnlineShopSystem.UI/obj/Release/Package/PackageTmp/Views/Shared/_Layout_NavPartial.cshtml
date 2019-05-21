@@ -1,0 +1,50 @@
+﻿
+<!--网站顶部导航栏-->
+
+<nav id="header" class="header">
+    <div class="top-header">
+        <div class="container-wrapper">
+            <div class="wrapper-left">
+                <div class="location">
+                    <i class="iconfont icon-location"></i>
+                    <span id="location-content" class="location-content">青岛</span>
+                </div>
+            </div>
+            <div class="wrapper-right">
+                <ul class="menu-list">
+                    <li>
+                        @Html.Partial("_Layout_NavUserPartial")
+                    </li>
+                    <li>|</li>
+                    <li>
+                        @Html.ActionLink("我的订单","Index","Order")
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="/UserCenter/Index"><span>我的京东</span><i class="iconfont icon-xiajiantou"></i></a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="/Admin/Index"><span>后台管理</span></a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="#"><span>企业采购</span><i class="iconfont icon-xiajiantou"></i></a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="#"><span>客户服务</span><i class="iconfont icon-xiajiantou"></i></a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="#"><span>网站导航</span><i class="iconfont icon-xiajiantou"></i></a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="#"><span>手机京东</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

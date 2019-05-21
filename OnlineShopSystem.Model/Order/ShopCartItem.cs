@@ -8,33 +8,24 @@ using System.Threading.Tasks;
 namespace OnlineShopSystem.Model.Order
 {
     /// <summary>
-    /// 购物车明细表
+    /// 用户购物车信息
     /// </summary>
     public class ShopCartItem
     {
         [Key]
         public int ID { get; set; }
 
+        [Display(Name="用户ID")]
+        public int UserID { get; set; }
 
-        [Display(Name = "购物车ID")]
-        public int CartID { get; set; }
-
-
-        [Display(Name = "产品ID")]
+        [Display(Name = "商品ID")]
         public int ProductID { get; set; }
 
+        [Display(Name = "商品数量")]
+        public int Amount { get; set; }
 
-        [Display(Name = "数量")]
-        public int Quantity { get; set; }
+        [Display(Name="添加日期")]
+        public DateTime? CreateDate { get; set; }
 
-
-        [Display(Name = "创建时间")]
-        [DataType(DataType.DateTime)]
-        public DateTime? CreateTime { get; set; }
-
-
-        [Display(Name = "更改时间")]
-        [DataType(DataType.DateTime)]
-        public DateTime? UpdateTime { get; set; }
     }
 }

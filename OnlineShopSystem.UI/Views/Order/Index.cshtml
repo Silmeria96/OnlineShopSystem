@@ -1,0 +1,184 @@
+﻿
+<!-- 我的订单 - 首页 -->
+
+@{
+    ViewBag.Title = "我的订单";
+    
+}
+
+<style>
+    body {
+        background: #f5f5f5;
+    }
+
+    /* 页面容器 */
+    .order-list-container {
+        position: relative;
+        margin: 20px auto 0;
+        width: 1200px;
+    }
+
+        .order-list-container:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* 左侧导航 */
+        .order-list-container .left-nav {
+            float: left;
+            width: 100px;
+            height: auto;
+        }
+
+            .order-list-container .left-nav .group-title {
+                font-weight: bold;
+            }
+
+            .order-list-container .left-nav .group-item {
+                margin: 5px 0;
+            }
+
+            .order-list-container .left-nav .group-item-link.active {
+                color: #e4393c;
+                font-weight: bold;
+            }
+
+        /* 内容容器 */
+        .order-list-container .order-list-main-wrap {
+            position: relative;
+            float: left;
+            padding: 0 10px;
+            width: calc(100% - 100px);
+            height: 300px;
+        }
+
+            .order-list-container .order-list-main-wrap .loading-ele {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                width: 100%;
+                height: 100%;
+                background-color: lightgray;
+            }
+</style>
+
+<!--通用搜索栏-->
+@Html.Partial("_SearchPartial2")
+
+<!--页面容器-->
+<div class="order-list-container">
+
+    <!--左侧导航-->
+    <div class="left-nav">
+        <div class="nav-group order">
+            <h5 class="group-title">订单中心</h5>
+            <ul class="group-list">
+                <li class="group-item">
+                    @Ajax.ActionLink("我的订单", "MyOrderListPartial", "Order", new { },
+                        new AjaxOptions
+                        {
+                            UpdateTargetId = "order-list-main-wrap",
+                            InsertionMode = InsertionMode.Replace,
+                            HttpMethod = "GET",
+                            LoadingElementId = "loading-ele"
+                        },
+                        new { @class = "group-item-link active" }
+                    )
+                </li>
+                <li class="group-item">
+                    @Ajax.ActionLink("我的评价", "MyCommentsPartial", "UserCenter", new {},
+                        new AjaxOptions
+                        {
+                            UpdateTargetId = "order-list-main-wrap",
+                            InsertionMode = InsertionMode.Replace,
+                            HttpMethod = "GET",
+                            LoadingElementId = "loading-ele"
+                        },
+                        new { @class = "group-item-link" }
+                    )
+                </li>
+                <li class="group-item">
+                    @Ajax.ActionLink("常购商品", "MyMostBuyedProductsPartial", "UserCenter", new { },
+                        new AjaxOptions
+                        {
+                            UpdateTargetId = "order-list-main-wrap",
+                            InsertionMode = InsertionMode.Replace,
+                            HttpMethod = "GET",
+                            LoadingElementId = "loading-ele"
+                        },
+                        new { @class = "group-item-link" }
+                    )
+                </li>
+            </ul>
+        </div>
+        <div class="nav-group focus">
+            <h5 class="group-title">关注中心</h5>
+            <ul class="group-list">
+                <li class="group-item">
+                    @Ajax.ActionLink("关注的商品", "MyFocusProductsPartial", "UserCenter", new { },
+                        new AjaxOptions
+                        {
+                            UpdateTargetId = "order-list-main-wrap",
+                            InsertionMode = InsertionMode.Replace,
+                            HttpMethod = "GET",
+                            LoadingElementId = "loading-ele"
+                        },
+                        new { @class = "group-item-link" }
+                    )
+                </li>
+                <li class="group-item">
+                    @Ajax.ActionLink("关注的店铺", "MyFocusShopsPartial", "UserCenter", new { },
+                        new AjaxOptions
+                        {
+                            UpdateTargetId = "order-list-main-wrap",
+                            InsertionMode = InsertionMode.Replace,
+                            HttpMethod = "GET",
+                            LoadingElementId = "loading-ele"
+                        },
+                        new { @class = "group-item-link" }
+                    )
+                </li>
+            </ul>
+        </div>
+        <div class="nav-group settings">
+            <h5 class="group-title">设置</h5>
+            <ul class="group-list">
+                <li class="group-item">
+                    @Ajax.ActionLink("个人设置", "MyInfoPatrial", "UserCenter", new { },
+                        new AjaxOptions
+                        {
+                            UpdateTargetId = "order-list-main-wrap",
+                            InsertionMode = InsertionMode.Replace,
+                            HttpMethod = "GET",
+                            LoadingElementId = "loading-ele"
+                        },
+                        new { @class = "group-item-link" }
+                    )
+                </li>
+                <li class="group-item">
+                    @Ajax.ActionLink("收货地址", "MyAdressPatrial", "", new { },
+                        new AjaxOptions
+                        {
+                            UpdateTargetId = "order-list-main-wrap",
+                            InsertionMode = InsertionMode.Replace,
+                            HttpMethod = "GET",
+                            LoadingElementId = "loading-ele"
+                        },
+                        new { @class = "group-item-link" }
+                    )
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--内容容器-->
+    <div id="order-list-main-wrap" class="order-list-main-wrap">
+        <div id="loading-ele" class="loading-ele">
+            加载中，请稍候...
+        </div>
+        @Html.Action("MyOrderListPartial")
+    </div>
+
+</div>

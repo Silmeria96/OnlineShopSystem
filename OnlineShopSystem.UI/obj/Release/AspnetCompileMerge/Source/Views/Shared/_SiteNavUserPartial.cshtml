@@ -1,0 +1,14 @@
+﻿@using Microsoft.AspNet.Identity
+
+<!--网站顶部导航栏 - 用户信息模块-->
+
+@if (Request.IsAuthenticated)
+{
+    @Html.ActionLink("欢迎您，" + User.Identity.GetUserName() + "!", "Index", "UserCenter", routeValues: null, htmlAttributes: new { title = "Manage" })
+    @Html.ActionLink("注销", "Logout", "Account", routeValues: null, htmlAttributes: new { id = "top-header-register", @class = "top-header-register" });
+}
+else
+{
+    @Html.ActionLink("你好，请登录", "Login", "Account", routeValues: null, htmlAttributes: new { id = "top-header-login", @class = "top-header-login" });
+    @Html.ActionLink("免费注册", "Register", "Account", routeValues: null, htmlAttributes: new { id = "top-header-register", @class = "top-header-register" });
+}
